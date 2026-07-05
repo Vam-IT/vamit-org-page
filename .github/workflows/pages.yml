@@ -32,7 +32,8 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p dist
-          cp index.html datenschutz.html vamit-icon-3x.png dist/
+          cp *.html vamit-icon-3x.png sitemap.xml robots.txt CNAME dist/
+          cp -r css fonts assets js en dist/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
