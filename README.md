@@ -17,12 +17,8 @@ keine externen Inhalte (DSGVO).
 
 ## Vor dem Launch (TODO)
 
-1. **Cal.com-Link ersetzen:** Cal.com-Event „Erstgespräch (30 min)" anlegen und die
-   Platzhalter-URL `https://cal.com/vamit/erstgespraech` ersetzen in:
-   - `kontakt.html` (Karte „Erstgespräch buchen")
-   - `en/index.html` (CTA-Band)
-2. **Bio Veselin Kolev erweitern:** `ueber-uns.html`, Founder-Card (TODO-Kommentar im Code).
-3. **Custom Domain prüfen:** In **Settings → Pages** muss `vam-it.com` als Custom Domain
+1. **Bio Veselin Kolev erweitern:** `ueber-uns.html`, Founder-Card (TODO-Kommentar im Code).
+2. **Custom Domain prüfen:** In **Settings → Pages** muss `vam-it.com` als Custom Domain
    mit „Enforce HTTPS" hinterlegt sein (die `CNAME`-Datei im Repo wird mit deployt).
 
 ## Deploying to GitHub Pages
