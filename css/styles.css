@@ -36,6 +36,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -265,6 +266,10 @@ h1 strong { font-weight: 600; }
 
 /* ── SECTION BASE ────────────────────────── */
 .section-wrap { padding: 5.5rem 2.5rem; }
+
+/* Auf kurzen Seiten (Kontakt, Impressum) füllt die letzte Sektion den
+   Raum bis zum Footer, statt Leerraum unter dem Inhalt zu lassen. */
+body > .section-wrap:last-of-type { flex: 1 0 auto; }
 .section-wrap--dark { background: var(--ink); color: var(--paper); }
 .section-inner { max-width: 1100px; margin: 0 auto; }
 
