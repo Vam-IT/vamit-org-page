@@ -9,11 +9,18 @@
   <link rel="apple-touch-icon" href="vamit-icon-3x.png" />
   <style>
     @font-face {
-      font-family: 'DM Sans';
+      font-family: 'Space Grotesk';
       font-style: normal;
-      font-weight: 300 600;
+      font-weight: 500 700;
       font-display: swap;
-      src: url('fonts/dmsans.woff2') format('woff2');
+      src: url('fonts/spacegrotesk.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400 600;
+      font-display: swap;
+      src: url('fonts/inter.woff2') format('woff2');
     }
     @font-face {
       font-family: 'JetBrains Mono';
@@ -24,14 +31,14 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --ink: #0D0D0D;
-      --paper: #F6F6F4;
-      --muted: #E2DED8;
-      --subtle: #9CA3AF;
-      --brand: #3B5BDB;
+      --ink: #1B1F2A;
+      --paper: #F7F5F0;
+      --muted: #5B6470;
+      --line: #D8D3C8;
+      --teal: #2B6E63;
     }
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--paper);
       color: var(--ink);
       line-height: 1.7;
@@ -55,48 +62,54 @@
       align-items: center;
       gap: 1rem;
       padding: 0.75rem 0 2.5rem;
-      border-bottom: 1px solid var(--muted);
+      border-bottom: 1px solid var(--line);
       margin-bottom: 3rem;
     }
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
       text-decoration: none;
       font-weight: 600;
     }
-    .brand img { height: 30px; width: auto; display: block; }
+    .brand .logo-word { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.03em; color: var(--ink); }
+    .brand .accent { color: var(--teal); }
+    .brand .legal-suffix { color: var(--muted); font-weight: 500; }
     .back {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.72rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--subtle);
+      color: var(--muted);
       text-decoration: none;
     }
-    .back:hover { color: var(--brand); }
+    .back:hover { color: var(--teal); }
     h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
       font-size: clamp(2.1rem, 4vw, 3.2rem);
       line-height: 1.1;
       letter-spacing: -0.03em;
       margin-bottom: 1rem;
     }
     .lead {
-      color: var(--subtle);
+      color: var(--muted);
       max-width: 78ch;
       margin-bottom: 2.5rem;
     }
     .section {
       background: white;
-      border: 1px solid var(--muted);
+      border: 1px solid var(--line);
       padding: 1.5rem;
       margin-bottom: 1rem;
       border-radius: 10px;
     }
     h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
       font-size: 1rem;
       margin-bottom: 0.8rem;
-      color: var(--brand);
+      color: var(--teal);
     }
     p, li { font-size: 0.95rem; }
     p + p { margin-top: 0.8rem; }
@@ -108,23 +121,23 @@
       font-size: 0.72rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--subtle);
+      color: var(--muted);
       margin-top: 0.75rem;
     }
     .footer {
       padding-top: 2rem;
       margin-top: 3rem;
-      border-top: 1px solid var(--muted);
+      border-top: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
       gap: 1rem;
       flex-wrap: wrap;
       font-size: 0.85rem;
-      color: var(--subtle);
+      color: var(--muted);
     }
-    .footer a { color: var(--brand); text-decoration: none; }
+    .footer a { color: var(--teal); text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
-    .inline-link { color: var(--brand); text-decoration: none; }
+    .inline-link { color: var(--teal); text-decoration: none; }
     .inline-link:hover { text-decoration: underline; }
   </style>
 </head>
@@ -132,8 +145,8 @@
   <div class="wrap">
     <div class="topbar">
       <a class="brand" href="index.html">
-        <img src="vamit-icon-3x.png" alt="VAMIT" />
-        <span>VAMIT UG</span>
+        <span class="logo-word">VAM<span class="accent">IT</span></span>
+        <span class="legal-suffix">UG</span>
       </a>
       <a class="back" href="index.html">Zurück zur Startseite</a>
     </div>
