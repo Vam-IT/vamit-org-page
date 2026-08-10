@@ -46,6 +46,15 @@ Unsere Internetseite ist eine reine Informationsseite ohne Registrierung, Login,
 
 Die Verarbeitung dieser Daten in sog. Logfiles ist erforderlich, um unsere Internetseite anzuzeigen und die Stabilität und Sicherheit zu gewährleisten.
 
+**Reichweiten- und Kampagnenanalyse (PostHog):** Um zu erkennen, über welchen Kanal Besucher auf unsere Internetseite gelangen (z. B. über einen QR-Code auf unserem Flyer oder über unsere Profile in sozialen Netzwerken), setzen wir das Analyse-Tool PostHog ein (Anbieter: PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA; betrieben über die europäische Cloud-Instanz von PostHog mit Serverstandort Frankfurt am Main). Dabei werden folgende Daten verarbeitet:
+
+- IP-Adresse des anfragenden Geräts
+- aufgerufene Seiten-URL, ggf. inkl. Kampagnenkennzeichnung (UTM-Parameter, z. B. „utm_source=tiktok")
+- Zeitpunkt des Aufrufs
+- grober technischer Kontext (Browsertyp, Betriebssystem)
+
+PostHog ist bei uns bewusst datensparsam konfiguriert: Es werden keine Cookies gesetzt und keine Daten im Browser gespeichert (weder Cookies noch Local- oder Session-Storage). Es findet keine dauerhafte Wiedererkennung einzelner Besucher über mehrere Seitenaufrufe oder Besuche hinweg statt, und es werden weder Klicks und Eingaben noch Bildschirminhalte aufgezeichnet (kein Session-Recording).
+
 **Wenn Sie uns per E-Mail kontaktieren** (z. B. an die auf der Seite angezeigte Adresse info@vam-it.com), verarbeiten wir die von Ihnen freiwillig mitgeteilten Daten, z. B.:
 
 - Ihre E-Mail-Adresse
@@ -62,6 +71,7 @@ Weitere Datenkategorien (z. B. Vertragsdaten, Zahlungsdaten, Bestandsdaten im Ra
 - Beantwortung etwaiger Kontaktanfragen per E-Mail
 - Darstellung der Internetseite mit einheitlichem Schriftbild (Google Fonts)
 - Anzeige eines verlinkten App-Store-Badges (Apple)
+- Analyse, über welchen Kanal (z. B. Social-Media-Profile, QR-Codes) Besucher auf unsere Seite gelangen, zur Erfolgsmessung von Marketingmaßnahmen
 
 **Rechtsgrundlage:** Soweit keine speziellere Rechtsgrundlage angegeben ist, beruht die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO (Wahrung berechtigter Interessen). Unser berechtigtes Interesse folgt dabei aus den oben genannten Zwecken. Bei Anfragen, die auf den Abschluss oder die Durchführung eines Vertrages gerichtet sind, kann zusätzlich Art. 6 Abs. 1 lit. b DSGVO einschlägig sein.
 
@@ -74,6 +84,8 @@ Wir arbeiten mit folgenden Dienstleistern zusammen:
 **Web-Hoster:** GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (Tochterunternehmen der Microsoft Corporation), Dienst „GitHub Pages"
 
 Beim Aufruf unserer Internetseite verarbeitet GitHub als Hosting-Anbieter automatisch die in Abschnitt V genannten technischen Zugriffsdaten (Server-Logfiles). Auf diese Logdaten haben wir als Betreiber der Inhalte keinen Zugriff und keine Möglichkeit zur Einsichtnahme oder Löschung einzelner Einträge.
+
+**Analyse-Tool (PostHog):** PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA, betrieben über die europäische Cloud-Instanz von PostHog (Serverstandort Frankfurt am Main, Deutschland). PostHog wird auf allen Seiten unseres Internetauftritts eingesetzt, um zu analysieren, über welchen Kanal Besucher zu uns gelangen (siehe Abschnitt V). Es werden dabei keine Cookies gesetzt. Weitere Informationen finden Sie in der Datenschutzerklärung von PostHog: https://posthog.com/privacy
 
 **Schriftarten (Google Fonts):** Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland (Mutterkonzern: Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA)
 
@@ -92,6 +104,8 @@ Ja, im Rahmen der Nutzung der in Abschnitt VI genannten Dienste werden Daten in 
 **Google Fonts:** Google LLC ist unter dem **EU-U.S. Data Privacy Framework (DPF)** zertifiziert, sodass ein angemessenes Datenschutzniveau im Sinne von Art. 45 DSGVO gewährleistet ist. Weitere Informationen: https://policies.google.com/privacy
 
 **Apple:** Apple Inc. ist unter dem **EU-U.S. Data Privacy Framework (DPF)** zertifiziert, sodass ein angemessenes Datenschutzniveau im Sinne von Art. 45 DSGVO gewährleistet ist. Weitere Informationen: https://www.apple.com/legal/privacy/de-ww/
+
+**PostHog:** Die von PostHog verarbeiteten Daten werden auf Servern der europäischen PostHog-Cloud-Instanz in Frankfurt am Main gespeichert und verarbeitet. PostHog Inc. als Anbieter dieses Dienstes hat zwar ihren Sitz in den USA; die eigentliche Datenverarbeitung erfolgt jedoch innerhalb der EU. Soweit im Rahmen von Support oder Systemadministration ein Zugriff aus einem Drittland nicht vollständig ausgeschlossen werden kann, hat PostHog hierfür geeignete Garantien (u. a. EU-Standardvertragsklauseln) vorgesehen. Weitere Informationen: https://posthog.com/privacy
 
 Eine darüber hinausgehende Übermittlung an Drittländer ist nicht vorgesehen.
 
@@ -155,7 +169,7 @@ Unsere Internetseite wird über GitHub Pages ausschließlich verschlüsselt mitt
 
 ## XVI. Setzen wir Cookies ein?
 
-Nein. Unsere Internetseite setzt keine eigenen Cookies und keine Cookies von Drittanbietern ein. Es findet kein Tracking, keine Reichweitenmessung und kein Online-Marketing über Cookies statt.
+Unsere Internetseite selbst setzt keine eigenen Cookies und keine Cookies von Drittanbietern ein. Für die in Abschnitt V beschriebene Kanal- und Kampagnenanalyse verwenden wir das Analyse-Tool PostHog – bewusst so konfiguriert, dass dabei ebenfalls keine Cookies gesetzt und keine Daten im Browser gespeichert werden. Es findet daher kein cookiebasiertes Tracking, keine dauerhafte Wiedererkennung einzelner Besucher und kein Online-Marketing über Cookies statt.
 
 ## XVII. Betreiben wir Profile in sozialen Netzwerken?
 
@@ -163,4 +177,4 @@ Nein. Wir betreiben derzeit keine Profile in sozialen Netzwerken, die mit dieser
 
 ## XVIII. Aktualität und Änderung dieser Datenschutzerklärung
 
-Diese Datenschutzerklärung hat den Stand Juni 2026. Durch die Weiterentwicklung unserer Internetseite (z. B. Einbindung eines Kontaktformulars, von Analyse-Tools oder Social-Media-Profilen) oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Fassung kann jederzeit auf dieser Internetseite abgerufen werden.
+Diese Datenschutzerklärung hat den Stand August 2026. Durch die Weiterentwicklung unserer Internetseite (z. B. Einbindung eines Kontaktformulars, von Analyse-Tools oder Social-Media-Profilen) oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Fassung kann jederzeit auf dieser Internetseite abgerufen werden.

@@ -11,6 +11,8 @@
   <link rel="icon" type="image/png" href="vamit-icon-3x.png" />
   <link rel="apple-touch-icon" href="vamit-icon-3x.png" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="/js/vendor/posthog.js"></script>
+  <script defer src="/js/analytics.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,6 +54,7 @@
 
   <!-- HERO -->
   <div class="hero-wrap">
+    <canvas id="hero-shader-canvas" class="hero-canvas" aria-hidden="true"></canvas>
     <div class="hero">
       <p class="hero-eyebrow">IT-Beratung &amp; Softwareentwicklung · Bocholt</p>
       <h1>Ihre IT in einer Hand: <strong>von Cloud bis <span class="accent">KI</span>.</strong></h1>
@@ -88,20 +91,20 @@
   <!-- DIVIDER -->
   <div class="divider" aria-hidden="true">
     <div class="divider-track">
-      <span>Cloud &amp; Infrastruktur</span><span class="dot">·</span>
-      <span>Automatisierung</span><span class="dot">·</span>
-      <span>Daten &amp; KI</span><span class="dot">·</span>
-      <span>Development</span><span class="dot">·</span>
-      <span>IT-Beratung</span><span class="dot">·</span>
-      <span>Cloud &amp; Infrastruktur</span><span class="dot">·</span>
-      <span>Automatisierung</span><span class="dot">·</span>
-      <span>Daten &amp; KI</span><span class="dot">·</span>
-      <span>Development</span><span class="dot">·</span>
-      <span>IT-Beratung</span><span class="dot">·</span>
-      <span>Cloud &amp; Infrastruktur</span><span class="dot">·</span>
-      <span>Automatisierung</span><span class="dot">·</span>
-      <span>Daten &amp; KI</span><span class="dot">·</span>
-      <span>Development</span><span class="dot">·</span>
+      <span>Cloud &amp; Infrastruktur</span><span class="dot">◆</span>
+      <span>Automatisierung</span><span class="dot">◆</span>
+      <span>Daten &amp; KI</span><span class="dot">◆</span>
+      <span>Development</span><span class="dot">◆</span>
+      <span>IT-Beratung</span><span class="dot">◆</span>
+      <span>Cloud &amp; Infrastruktur</span><span class="dot">◆</span>
+      <span>Automatisierung</span><span class="dot">◆</span>
+      <span>Daten &amp; KI</span><span class="dot">◆</span>
+      <span>Development</span><span class="dot">◆</span>
+      <span>IT-Beratung</span><span class="dot">◆</span>
+      <span>Cloud &amp; Infrastruktur</span><span class="dot">◆</span>
+      <span>Automatisierung</span><span class="dot">◆</span>
+      <span>Daten &amp; KI</span><span class="dot">◆</span>
+      <span>Development</span><span class="dot">◆</span>
     </div>
   </div>
 
@@ -270,5 +273,6 @@
   </footer>
 
   <script src="js/nav.js"></script>
+  <script src="js/hero-shader.js"></script>
 </body>
 </html>

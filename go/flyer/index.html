@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VAMIT – Weiterleitung</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://vam-it.com/go/flyer/" />
+  <link rel="icon" type="image/png" href="/vamit-icon-3x.png" />
+
+  <!-- JS-disabled fallback only. Wrapped in <noscript> so it never fires
+       (and never races the tracked redirect) when JS is enabled. -->
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://vam-it.com/?utm_source=flyer&utm_medium=qr&utm_campaign=flyer" />
+  </noscript>
+
+  <script defer src="/js/vendor/posthog.js"></script>
+  <script defer src="/js/analytics.js"></script>
+</head>
+<body data-utm-source="flyer" data-utm-medium="qr" data-utm-campaign="flyer" data-target="/">
+  <noscript>
+    <p style="font-family:sans-serif;padding:3rem 1.5rem;text-align:center;color:#1B1F2A;">
+      Weiter zu <a href="https://vam-it.com/?utm_source=flyer&utm_medium=qr&utm_campaign=flyer" style="color:#2B6E63;">vam-it.com</a>
+    </p>
+  </noscript>
+  <script defer src="/js/redirect.js"></script>
+</body>
+</html>

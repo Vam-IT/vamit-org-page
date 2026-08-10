@@ -1,10 +1,10 @@
 /* ── FONTS (self-hosted) ─────────────────── */
 @font-face {
-  font-family: 'Space Grotesk';
+  font-family: 'Manrope';
   font-style: normal;
-  font-weight: 500 700;
+  font-weight: 600 700;
   font-display: swap;
-  src: url('../fonts/spacegrotesk.woff2') format('woff2');
+  src: url('../fonts/manrope.woff2') format('woff2');
 }
 
 @font-face {
@@ -15,27 +15,31 @@
   src: url('../fonts/inter.woff2') format('woff2');
 }
 
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400 500;
-  font-display: swap;
-  src: url('../fonts/jetbrainsmono.woff2') format('woff2');
-}
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── "Pragmatic Cyber" design tokens ───────
+   Dark-section roles (nav, hero, cta-band, section-wrap--dark, footer):
+     --ink (bg), --panel (card/surface), --border-dark (outline),
+     --on-dark (primary text), --muted-dark (secondary text), --cyan (accent)
+   Light-section roles (default section-wrap, cards, legal pages):
+     --paper (bg), --line (outline), --ink (primary text, dual role),
+     --muted (secondary text), --teal (accent text - darkened cyan for contrast)
+   Electric Cyan is ~1.3:1 on white, so light sections use --teal instead;
+   full electric cyan is reserved for dark surfaces (~13.6:1 there). */
 :root {
-  --ink:       #1B1F2A;
-  --paper:     #F7F5F0;
-  --panel:     #EDEAE2;
-  --line:      #D8D3C8;
-  --muted:     #5B6470;
-  --teal:      #2B6E63;
-  --teal-deep: #1E4E46;
-  --teal-l:    #E7F1EE;
-  --mint:      #8FD6C6;
-  --font-display: 'Space Grotesk', sans-serif;
+  --ink:         #0D1421; /* deep-navy: dark-section bg / light-section text */
+  --paper:       #F4F6F7; /* light-section bg */
+  --panel:       #1A2536; /* slate-surface: dark-section card bg */
+  --panel-light: #E8ECEE; /* light-section hover/subtle fill */
+  --line:        #DDE3E8; /* light-section borders */
+  --border-dark: #2D3A4F; /* dark-section borders (border-muted) */
+  --muted:       #5B6B7A; /* light-section secondary text */
+  --muted-dark:  #94A3B8; /* dark-section secondary text (text-dimmed) */
+  --on-dark:     #E0E3E5; /* dark-section primary text */
+  --cyan:        #00F5FF; /* electric cyan: dark-section accent + button fill */
+  --cyan-l:      #E1F6F7; /* light tag-bg tint */
+  --teal:        #006C71; /* dark-teal: light-section accent (readable on white) */
+  --font-display: 'Manrope', sans-serif;
   --font-body:    'Inter', sans-serif;
 }
 
@@ -73,10 +77,10 @@ nav {
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 0.03em;
-  color: var(--paper);
+  color: var(--on-dark);
 }
 
-.accent { color: var(--mint); }
+.accent { color: var(--cyan); }
 
 .nav-links {
   display: flex;
@@ -97,29 +101,43 @@ nav {
 .nav-links a.active { color: rgba(255,255,255,0.9); }
 
 .nav-links a.nav-cta {
-  color: white;
-  background: var(--teal-deep);
+  color: var(--ink);
+  background: var(--cyan);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background 0.2s;
 }
 
-.nav-links a.nav-cta:hover { background: var(--teal); }
+.nav-links a.nav-cta:hover { background: var(--on-dark); }
 
 .nav-lang {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.68rem;
   letter-spacing: 0.1em;
 }
 
 /* ── HERO ────────────────────────────────── */
 .hero-wrap {
+  position: relative;
   background:
     radial-gradient(circle at 1px 1px, rgba(255,255,255,0.07) 1.4px, transparent 0) 0 0/28px 28px,
     var(--ink);
-  color: var(--paper);
+  color: var(--on-dark);
   padding: 0 2.5rem;
+  overflow: hidden;
 }
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.hero-wrap .hero { position: relative; z-index: 1; }
 
 .hero {
   max-width: 1100px;
@@ -137,9 +155,10 @@ nav {
 }
 
 .hero-eyebrow {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.72rem;
-  color: var(--mint);
+  color: var(--cyan);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 2.25rem;
@@ -155,7 +174,7 @@ nav {
   display: inline-block;
   width: 2rem;
   height: 1px;
-  background: var(--mint);
+  background: var(--cyan);
 }
 
 h1 {
@@ -166,7 +185,7 @@ h1 {
   letter-spacing: -0.02em;
   max-width: 18ch;
   margin-bottom: 1.75rem;
-  color: var(--paper);
+  color: var(--on-dark);
 }
 
 .hero--page h1 {
@@ -177,9 +196,9 @@ h1 strong { font-weight: 700; }
 
 .hero-sub {
   font-size: clamp(1rem, 1.8vw, 1.15rem);
-  color: rgba(255,255,255,0.48);
+  color: var(--muted-dark);
   max-width: 52ch;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 3rem;
   line-height: 1.7;
 }
@@ -191,12 +210,12 @@ h1 strong { font-weight: 700; }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--teal-deep);
-  color: white;
+  background: var(--cyan);
+  color: var(--ink);
   padding: 0.85rem 1.75rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   border-radius: 4px;
   transition: background 0.2s, transform 0.15s;
@@ -204,7 +223,7 @@ h1 strong { font-weight: 700; }
   border: 1px solid transparent;
 }
 
-.btn:hover { background: var(--ink); transform: translateY(-1px); }
+.btn:hover { background: var(--on-dark); transform: translateY(-1px); }
 
 .btn-ghost {
   background: transparent;
@@ -238,24 +257,27 @@ h1 strong { font-weight: 700; }
   display: block;
   font-size: 1rem;
   font-weight: 500;
-  color: white;
+  color: var(--on-dark);
   margin-bottom: 0.35rem;
   letter-spacing: -0.01em;
 }
 
 .commit-item span {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
+  color: var(--muted-dark);
 }
 
-/* ── DIVIDER ─────────────────────────────── */
+/* ── DIVIDER / TICKER ─────────────────────── */
 .divider {
   overflow: hidden;
   padding: 1.25rem 0;
-  background: var(--teal);
+  background: var(--panel);
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
 }
 
 .divider-track {
@@ -266,15 +288,16 @@ h1 strong { font-weight: 700; }
 }
 
 .divider-track span {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.68rem;
   letter-spacing: 0.2em;
-  color: rgba(255,255,255,0.6);
+  color: var(--on-dark);
   text-transform: uppercase;
   flex-shrink: 0;
 }
 
-.divider-track span.dot { color: rgba(255,255,255,0.9); }
+.divider-track span.dot { color: var(--cyan); }
 
 @keyframes marquee {
   from { transform: translateX(0); }
@@ -291,11 +314,12 @@ h1 strong { font-weight: 700; }
 /* Auf kurzen Seiten (Kontakt, Impressum) füllt die letzte Sektion den
    Raum bis zum Footer, statt Leerraum unter dem Inhalt zu lassen. */
 body > .section-wrap:last-of-type { flex: 1 0 auto; }
-.section-wrap--dark { background: var(--ink); color: var(--paper); }
+.section-wrap--dark { background: var(--ink); color: var(--on-dark); }
 .section-inner { max-width: 1100px; margin: 0 auto; }
 
 .section-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.7rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -313,7 +337,7 @@ body > .section-wrap:last-of-type { flex: 1 0 auto; }
   background: var(--line);
 }
 
-.section-wrap--dark .section-label { color: var(--mint); }
+.section-wrap--dark .section-label { color: var(--cyan); }
 .section-wrap--dark .section-label::after { background: rgba(255,255,255,0.08); }
 
 h2 {
@@ -335,7 +359,7 @@ h2 strong { font-weight: 700; }
   line-height: 1.7;
 }
 
-.section-wrap--dark .section-intro { color: rgba(255,255,255,0.45); }
+.section-wrap--dark .section-intro { color: var(--muted-dark); }
 
 /* ── SERVICES GRID ───────────────────────── */
 .services-grid {
@@ -355,10 +379,11 @@ h2 strong { font-weight: 700; }
   color: inherit;
 }
 
-.service-card:hover { background: var(--panel); }
+.service-card:hover { background: var(--panel-light); }
 
 .service-num {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.68rem;
   letter-spacing: 0.1em;
   color: var(--teal);
@@ -387,14 +412,15 @@ h2 strong { font-weight: 700; }
 }
 
 .tag {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.62rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--teal);
-  background: var(--teal-l);
-  padding: 0.25rem 0.6rem;
-  border-radius: 2px;
+  background: var(--cyan-l);
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
 }
 
 /* ── SERVICE DETAIL (Leistungen page) ────── */
@@ -443,7 +469,8 @@ h2 strong { font-weight: 700; }
   position: absolute;
   left: 0;
   color: var(--teal);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.8rem;
 }
 
@@ -463,21 +490,22 @@ h2 strong { font-weight: 700; }
 }
 
 .section-wrap--dark .steps-grid {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.08);
+  background: var(--border-dark);
+  border-color: var(--border-dark);
 }
 
 .section-wrap--dark .step-card { background: var(--ink); }
 
 .step-num {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.68rem;
   letter-spacing: 0.1em;
   color: var(--teal);
   margin-bottom: 1.25rem;
 }
 
-.section-wrap--dark .step-num { color: var(--mint); }
+.section-wrap--dark .step-num { color: var(--cyan); }
 
 .step-card h3 {
   font-family: var(--font-display);
@@ -487,7 +515,7 @@ h2 strong { font-weight: 700; }
   letter-spacing: -0.01em;
 }
 
-.section-wrap--dark .step-card h3 { color: white; }
+.section-wrap--dark .step-card h3 { color: var(--on-dark); }
 
 .step-card p {
   font-size: 0.875rem;
@@ -495,7 +523,7 @@ h2 strong { font-weight: 700; }
   line-height: 1.7;
 }
 
-.section-wrap--dark .step-card p { color: rgba(255,255,255,0.4); }
+.section-wrap--dark .step-card p { color: var(--muted-dark); }
 
 /* ── CHECKLIST ───────────────────────────── */
 .check-list {
@@ -515,7 +543,7 @@ h2 strong { font-weight: 700; }
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--mint);
+  color: var(--cyan);
   font-weight: 600;
 }
 
@@ -529,30 +557,31 @@ h2 strong { font-weight: 700; }
 
 .offer-box {
   background: var(--ink);
-  color: var(--paper);
+  color: var(--on-dark);
   border-radius: 8px;
+  border: 1px solid var(--border-dark);
   padding: 2.5rem;
   position: sticky;
   top: 6rem;
 }
 
-.offer-box .section-label { margin-bottom: 1.5rem; color: var(--mint); }
-.offer-box .section-label::after { background: rgba(255,255,255,0.1); }
+.offer-box .section-label { margin-bottom: 1.5rem; color: var(--cyan); }
+.offer-box .section-label::after { background: var(--border-dark); }
 
 .offer-box h3 {
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
-  color: white;
+  color: var(--on-dark);
 }
 
 .offer-box .check-list { margin-bottom: 2rem; }
-.offer-box .check-list li { color: rgba(255,255,255,0.75); font-size: 0.9rem; }
+.offer-box .check-list li { color: var(--on-dark); font-size: 0.9rem; }
 
 .offer-note {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.4);
+  color: var(--muted-dark);
   margin-top: 1rem;
   line-height: 1.6;
 }
@@ -591,14 +620,14 @@ h2 strong { font-weight: 700; }
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-  background: var(--teal-deep);
+  background: var(--cyan);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
   font-size: 0.78rem;
-  font-weight: 500;
-  color: white;
+  font-weight: 600;
+  color: var(--ink);
   margin-bottom: 1.25rem;
   letter-spacing: 0.03em;
 }
@@ -611,7 +640,8 @@ h2 strong { font-weight: 700; }
 }
 
 .founder-role {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -639,7 +669,7 @@ h2 strong { font-weight: 700; }
   margin-bottom: 1.25rem;
 }
 
-.section-wrap--dark .prose-cols p { color: rgba(255,255,255,0.5); }
+.section-wrap--dark .prose-cols p { color: var(--muted-dark); }
 
 /* ── APP PROOF ───────────────────────────── */
 .app-grid {
@@ -674,7 +704,8 @@ h2 strong { font-weight: 700; }
 }
 
 .app-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   color: var(--muted);
@@ -688,17 +719,17 @@ h2 strong { font-weight: 700; }
   background:
     radial-gradient(circle at 1px 1px, rgba(255,255,255,0.07) 1.4px, transparent 0) 0 0/28px 28px,
     var(--ink);
-  color: var(--paper);
+  color: var(--on-dark);
   padding: 6rem 2.5rem;
   text-align: center;
 }
 
 .cta-band-inner { max-width: 720px; margin: 0 auto; }
 
-.cta-band h2 { color: white; margin-bottom: 1.25rem; }
+.cta-band h2 { color: var(--on-dark); margin-bottom: 1.25rem; }
 
 .cta-band p {
-  color: rgba(255,255,255,0.48);
+  color: var(--muted-dark);
   margin-bottom: 2.5rem;
   font-size: 1.05rem;
   line-height: 1.7;
@@ -708,11 +739,12 @@ h2 strong { font-weight: 700; }
 
 .cta-meta {
   margin-top: 2rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: var(--muted-dark);
 }
 
 /* ── KONTAKT ─────────────────────────────── */
@@ -794,7 +826,7 @@ h2 strong { font-weight: 700; }
 /* ── FOOTER ──────────────────────────────── */
 footer {
   background: var(--ink);
-  color: white;
+  color: var(--on-dark);
   padding: 4rem 2.5rem 0;
   margin-top: auto;
 }
@@ -815,17 +847,18 @@ footer {
 
 .footer-tagline {
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.35);
+  color: var(--muted-dark);
   max-width: 32ch;
   line-height: 1.65;
 }
 
 .footer-col h3 {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--mint);
+  color: var(--cyan);
   margin-bottom: 1.25rem;
 }
 
@@ -835,11 +868,11 @@ footer {
 
 .footer-col a {
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.5);
+  color: var(--muted-dark);
   text-decoration: none;
 }
 
-.footer-col a:hover { color: white; }
+.footer-col a:hover { color: var(--on-dark); }
 
 .footer-bottom {
   max-width: 1100px;
@@ -855,7 +888,8 @@ footer {
 }
 
 .footer-bottom a {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   color: rgba(255,255,255,0.2);
