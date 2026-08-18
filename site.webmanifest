@@ -1,0 +1,12 @@
+{
+  "name": "VAMIT UG",
+  "short_name": "VAMIT",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0D1421",
+  "background_color": "#0D1421",
+  "display": "standalone",
+  "start_url": "/"
+}

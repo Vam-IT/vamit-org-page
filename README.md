@@ -6,7 +6,7 @@ Static multi-page website for VAMIT UG, deployed to GitHub Pages at https://vam-
 
 - `index.html` – Start (Hero, Leistungen, Arbeitsweise, Digitalisierungs-Check-Teaser, App, CTA)
 - `leistungen.html` – Leistungen im Detail (4 Felder mit Anker-Links)
-- `digitalisierungs-check.html` – Festpreis-Angebotsseite
+- `digitalisierungs-check.html` – Angebotsseite für den IT-Check
 - `ueber-uns.html` – Über VAMIT (Story, Werte, Geschäftsführer)
 - `kontakt.html` – Erstgespräch buchen / E-Mail / Adresse
 - `impressum.html`, `datenschutz.html` – Rechtliches

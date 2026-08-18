@@ -8,9 +8,15 @@
   <link rel="canonical" href="https://vam-it.com/en/" />
   <link rel="alternate" hreflang="de" href="https://vam-it.com/" />
   <link rel="alternate" hreflang="en" href="https://vam-it.com/en/" />
-  <link rel="icon" type="image/png" href="../vamit-icon-3x.png" />
-  <link rel="apple-touch-icon" href="../vamit-icon-3x.png" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D1421" />
+  <link rel="preload" href="/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../css/styles.css" />
+  <script defer src="/js/lang.js"></script>
   <script defer src="/js/consent.js"></script>
   <script type="application/ld+json">
   {
@@ -20,6 +26,7 @@
     "description": "VAMIT UG – your IT partner from Bocholt, Germany: cloud & infrastructure, automation & integrations, data & AI, custom software development.",
     "url": "https://vam-it.com/en/",
     "email": "info@vam-it.com",
+    "telephone": "+49 176 23204351",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Petersfeldstraße 16",
@@ -37,6 +44,7 @@
   <!-- NAV -->
   <nav>
     <a class="nav-logo" href="./">
+      <img class="logo-mark" src="../assets/logo-mark.png" alt="" width="44" height="30" />
       <span class="logo-word">VAM<span class="accent">IT</span></span>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -50,6 +58,8 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+
+  <main>
 
   <!-- HERO -->
   <div class="hero-wrap">
@@ -80,8 +90,8 @@
           <span>DE / NL border region</span>
         </div>
         <div class="commit-item">
-          <strong>Fixed price</strong>
-          <span>Project start</span>
+          <strong>Binding quote</strong>
+          <span>Before project start</span>
         </div>
       </div>
     </div>
@@ -141,7 +151,8 @@
       <p class="section-intro">
         Know where your IT stands within one to two weeks: we analyze your infrastructure,
         processes and data flows and deliver a written report with a prioritized roadmap,
-        at a fixed price and with no follow-up obligation. We'll quote the price in a free intro call.
+        with a binding quote upfront and no follow-up obligation. We'll walk you through the
+        quote in a free intro call.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn">Book a free intro call</a>
@@ -163,7 +174,7 @@
       </p>
       <div class="app-actions">
         <a class="app-store-badge" href="https://apps.apple.com/us/app/vami-push-ups/id6758764261" target="_blank" rel="noopener">
-          <img src="../assets/app-store-badge.svg" alt="Download on the App Store" />
+          <img src="../assets/app-store-badge.svg" alt="Download on the App Store" width="132" height="44" />
         </a>
         <a class="app-link" href="https://vamiapp.com" target="_blank" rel="noopener">vamiapp.com ↗</a>
       </div>
@@ -186,11 +197,14 @@
     </div>
   </div>
 
+  </main>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div>
         <div class="footer-logo">
+          <img class="logo-mark" src="../assets/logo-mark.png" alt="" width="50" height="34" />
           <span class="logo-word">VAM<span class="accent">IT</span></span>
         </div>
         <p class="footer-tagline">IT consulting and software development from Bocholt, Germany.</p>

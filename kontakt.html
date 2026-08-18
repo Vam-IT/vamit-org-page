@@ -6,9 +6,15 @@
   <title>Kontakt – Kostenloses Erstgespräch buchen | VAMIT Bocholt</title>
   <meta name="description" content="Kontakt zur VAMIT UG in Bocholt: kostenloses Erstgespräch buchen oder E-Mail an info@vam-it.com schreiben. Sie erhalten innerhalb von 24 Stunden eine Antwort." />
   <link rel="canonical" href="https://vam-it.com/kontakt.html" />
-  <link rel="icon" type="image/png" href="vamit-icon-3x.png" />
-  <link rel="apple-touch-icon" href="vamit-icon-3x.png" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D1421" />
+  <link rel="preload" href="/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="/js/lang.js"></script>
   <script defer src="/js/consent.js"></script>
   <script type="application/ld+json">
   {
@@ -18,6 +24,7 @@
     "description": "Kontakt zur VAMIT UG in Bocholt: kostenloses Erstgespräch buchen oder E-Mail an info@vam-it.com schreiben. Sie erhalten innerhalb von 24 Stunden eine Antwort.",
     "url": "https://vam-it.com/kontakt.html",
     "email": "info@vam-it.com",
+    "telephone": "+49 176 23204351",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Petersfeldstraße 16",
@@ -35,6 +42,7 @@
   <!-- NAV -->
   <nav>
     <a class="nav-logo" href="index.html">
+      <img class="logo-mark" src="assets/logo-mark.png" alt="" width="44" height="30" />
       <span class="logo-word">VAM<span class="accent">IT</span></span>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -48,6 +56,8 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+
+  <main>
 
   <!-- PAGE HERO -->
   <div class="hero-wrap">
@@ -65,7 +75,7 @@
     <div class="section-inner">
       <div class="contact-grid">
         <div class="contact-card">
-          <h3>Erstgespräch buchen</h3>
+          <h2>Erstgespräch buchen</h2>
           <p>
             30 Minuten per Video oder Telefon. Wir hören zu, stellen Fragen und sagen
             Ihnen ehrlich, ob und wie wir helfen können.
@@ -73,15 +83,17 @@
           <a href="https://www.cal.eu/vamit" target="_blank" rel="noopener" class="btn">Termin auswählen ↗</a>
         </div>
         <div class="contact-card">
-          <h3>E-Mail schreiben</h3>
+          <h2>E-Mail oder Anruf</h2>
           <p>
-            Beschreiben Sie kurz Ihr Anliegen. Sie erhalten innerhalb von 24 Stunden
-            eine Antwort, werktags meist deutlich schneller.
+            Beschreiben Sie kurz Ihr Anliegen per E-Mail. Sie erhalten innerhalb von
+            24 Stunden eine Antwort, werktags meist deutlich schneller. Oder rufen
+            Sie direkt an.
           </p>
-          <a class="plain-link" href="mailto:info@vam-it.com">info@vam-it.com</a>
+          <a class="plain-link" href="mailto:info@vam-it.com">info@vam-it.com</a><br />
+          <a class="plain-link" href="tel:+4917623204351">+49 176 23204351</a>
         </div>
         <div class="contact-card">
-          <h3>Vor Ort bei Ihnen</h3>
+          <h2>Vor Ort bei Ihnen</h2>
           <p style="margin-bottom:0;">
             Persönliche Termine finden bei Ihnen im Unternehmen statt, in Bocholt,
             im Westmünsterland und in der Umgebung. Gerade wenn es um Ihre
@@ -89,14 +101,40 @@
           </p>
         </div>
       </div>
+
+      <div class="contact-form-wrap">
+        <h2>Oder schreiben Sie uns direkt</h2>
+        <p>
+          Kurz Name, Firma und Anliegen eintragen, wir antworten innerhalb von
+          24 Stunden. Der Button öffnet Ihr E-Mail-Programm mit vorausgefülltem Text.
+        </p>
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <label for="cfName">Name</label>
+            <input type="text" id="cfName" name="name" required />
+          </div>
+          <div class="form-row">
+            <label for="cfCompany">Firma <span class="form-optional">(optional)</span></label>
+            <input type="text" id="cfCompany" name="company" />
+          </div>
+          <div class="form-row">
+            <label for="cfMessage">Ihr Anliegen</label>
+            <textarea id="cfMessage" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Nachricht senden</button>
+        </form>
+      </div>
     </div>
   </div>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div>
         <div class="footer-logo">
+          <img class="logo-mark" src="assets/logo-mark.png" alt="" width="50" height="34" />
           <span class="logo-word">VAM<span class="accent">IT</span></span>
         </div>
         <p class="footer-tagline">IT-Beratung und Softwareentwicklung aus Bocholt, Westmünsterland.</p>
@@ -127,5 +165,6 @@
   </footer>
 
   <script src="js/nav.js"></script>
+  <script src="js/contact-form.js"></script>
 </body>
 </html>
