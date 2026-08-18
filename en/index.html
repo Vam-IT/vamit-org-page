@@ -11,9 +11,26 @@
   <link rel="icon" type="image/png" href="../vamit-icon-3x.png" />
   <link rel="apple-touch-icon" href="../vamit-icon-3x.png" />
   <link rel="stylesheet" href="../css/styles.css" />
-  <script defer src="/js/vendor/posthog.js"></script>
-  <script defer src="/js/analytics.js"></script>
   <script defer src="/js/consent.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "VAMIT UG (haftungsbeschränkt)",
+    "description": "VAMIT UG – your IT partner from Bocholt, Germany: cloud & infrastructure, automation & integrations, data & AI, custom software development.",
+    "url": "https://vam-it.com/en/",
+    "email": "info@vam-it.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Petersfeldstraße 16",
+      "postalCode": "46395",
+      "addressLocality": "Bocholt",
+      "addressCountry": "DE"
+    },
+    "areaServed": "Bocholt, Westmünsterland, Nordrhein-Westfalen",
+    "founder": { "@type": "Person", "name": "Veselin Kolev" }
+  }
+  </script>
 </head>
 <body>
 
@@ -29,7 +46,7 @@
       <li><a class="nav-lang" href="../" lang="de" hreflang="de">DE</a></li>
       <li><a class="nav-cta" href="#contact">Intro call</a></li>
     </ul>
-    <button class="nav-burger" id="navBurger" aria-label="Open menu">
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
   </nav>

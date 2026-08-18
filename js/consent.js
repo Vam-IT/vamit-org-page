@@ -1,12 +1,45 @@
-// Consent gate for the PostHog analytics loaded via js/analytics.js.
-// Nothing in js/analytics.js runs until the visitor actively accepts here;
-// the decision itself is stored in localStorage (this alone is treated as
-// technically necessary and needs no separate consent). A small persistent
-// toggle lets visitors reopen the banner and change their mind at any time.
+// Consent gate for PostHog analytics. Nothing runs until the visitor
+// actively accepts here; the decision itself is stored in localStorage
+// (this alone is treated as technically necessary and needs no separate
+// consent). A small persistent toggle lets visitors reopen the banner and
+// change their mind at any time.
+//
+// js/vendor/posthog.js (268 KB) and js/analytics.js are NOT loaded via
+// static <script> tags on most pages -- they're fetched on demand, only
+// once consent is actually granted, so visitors who decline or haven't
+// decided yet never download them. (go/flyer/index.html is the deliberate
+// exception: it still loads them eagerly, because that page's whole job is
+// firing one tracking beacon in the instant before it redirects away, and
+// there's no time to wait on a fresh network fetch for that.)
 (function () {
   var CONSENT_KEY = 'vamit_consent';
   var bannerEl = null;
   var toggleEl = null;
+  var analyticsLoading = false;
+  var pendingCallbacks = [];
+
+  function ensureAnalyticsLoaded(callback) {
+    if (typeof window.vamitInitAnalytics === 'function') {
+      callback();
+      return;
+    }
+    pendingCallbacks.push(callback);
+    if (analyticsLoading) return;
+    analyticsLoading = true;
+
+    var vendorScript = document.createElement('script');
+    vendorScript.src = '/js/vendor/posthog.js';
+    vendorScript.onload = function () {
+      var analyticsScript = document.createElement('script');
+      analyticsScript.src = '/js/analytics.js';
+      analyticsScript.onload = function () {
+        pendingCallbacks.forEach(function (cb) { cb(); });
+        pendingCallbacks = [];
+      };
+      document.head.appendChild(analyticsScript);
+    };
+    document.head.appendChild(vendorScript);
+  }
 
   function getConsent() {
     try { return localStorage.getItem(CONSENT_KEY); }
@@ -107,8 +140,8 @@
   function applyConsent(value) {
     setConsent(value);
     hideBanner();
-    if (value === 'granted' && typeof window.vamitInitAnalytics === 'function') {
-      window.vamitInitAnalytics();
+    if (value === 'granted') {
+      ensureAnalyticsLoaded(function () { window.vamitInitAnalytics(); });
     }
   }
 
@@ -118,7 +151,7 @@
 
   var consent = getConsent();
   if (consent === 'granted') {
-    if (typeof window.vamitInitAnalytics === 'function') window.vamitInitAnalytics();
+    ensureAnalyticsLoaded(function () { window.vamitInitAnalytics(); });
   } else if (consent !== 'denied') {
     showBanner();
   }

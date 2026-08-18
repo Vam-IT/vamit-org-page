@@ -12,14 +12,15 @@ Static multi-page website for VAMIT UG, deployed to GitHub Pages at https://vam-
 - `impressum.html`, `datenschutz.html` – Rechtliches
 - `en/index.html` – englische Landing Page (eine Seite)
 
-Schriftarten und Bilder sind lokal eingebunden (`fonts/`, `assets/`) — die Seite lädt
-keine externen Inhalte (DSGVO).
+Schriftarten und Bilder sind lokal eingebunden (`fonts/`, `assets/`). Die Seite bindet
+seit dem PostHog-Consent-Banner (`js/consent.js`) ein Analyse-Tool ein, das erst nach
+aktiver Zustimmung nachgeladen wird (`js/vendor/`, `js/analytics.js`) — Details in
+`datenschutz.html`.
 
-## Vor dem Launch (TODO)
+## Offene Punkte
 
-1. **Bio Veselin Kolev erweitern:** `ueber-uns.html`, Founder-Card (TODO-Kommentar im Code).
-2. **Custom Domain prüfen:** In **Settings → Pages** muss `vam-it.com` als Custom Domain
-   mit „Enforce HTTPS" hinterlegt sein (die `CNAME`-Datei im Repo wird mit deployt).
+1. **Bio Veselin Kolev erweitern:** `ueber-uns.html`, Founder-Card (TODO-Kommentar im Code) —
+   braucht noch echte Angaben zu Schwerpunkt, Hintergrund und Zertifizierungen.
 
 ## Deploying to GitHub Pages
 

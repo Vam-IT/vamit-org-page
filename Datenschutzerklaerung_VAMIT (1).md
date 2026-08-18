@@ -1,8 +1,8 @@
 # Datenschutzerklärung
 
-## I. Grundlegendes
-
 Hier informieren wir Sie über die Verarbeitung personenbezogener Daten bei Nutzung unserer Internetseite. Diese Datenschutzerklärung gilt für unsere Internetseite. Wir betreiben keine Social-Media-Profile und keine weiteren Online-Präsenzen, auf die diese Erklärung ebenfalls Anwendung finden müsste.
+
+## I. Grundlegendes
 
 Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, also u. a. Name, Anschrift, E-Mail-Adresse, IP-Adresse oder auch das Nutzerverhalten.
 
@@ -31,9 +31,9 @@ Wenn Sie als Interessent oder sonstiger Besucher unsere Internetseite aufrufen, 
 
 ## V. Welche Daten erheben wir von Ihnen und zu welchen Zwecken bzw. auf welcher Rechtsgrundlage verarbeiten wir diese?
 
-Unsere Internetseite ist eine reine Informationsseite ohne Registrierung, Login, Kontaktformular oder sonstige Eingabemöglichkeiten. Sie enthält eingebundene externe Inhalte von Google (Schriftarten) und Apple (App-Store-Badge), auf die in Abschnitt VI gesondert eingegangen wird.
+Unsere Internetseite ist eine reine Informationsseite ohne Registrierung, Login, Kontaktformular oder sonstige Eingabemöglichkeiten. Sämtliche Inhalte (einschließlich Schriftarten und Bilder) werden lokal von unserem Hosting-Anbieter ausgeliefert. Für die Analyse, über welchen Kanal Besucher auf unsere Seite gelangen, setzen wir zusätzlich das cookielose Analyse-Tool PostHog ein (Näheres dazu unten sowie in Abschnitt VI). Unsere Internetseite enthält außerdem Verweise (Links) auf externe Angebote, insbesondere auf den Terminbuchungsdienst Cal.com und den Apple App Store, auf die in Abschnitt VI gesondert eingegangen wird.
 
-**Beim Besuch unserer Internetseite** werden nur die personenbezogenen Daten verarbeitet, die Ihr Browser automatisch an den Server übermittelt. Diese Verarbeitung erfolgt durch unseren Hosting-Anbieter GitHub Pages sowie durch die in Abschnitt VI genannten Drittanbieter (s. dort). Es werden folgende Daten verarbeitet, die technisch erforderlich sind, um unsere Internetseite anzuzeigen und um deren Stabilität und Sicherheit zu gewährleisten:
+**Beim Besuch unserer Internetseite** werden nur die personenbezogenen Daten verarbeitet, die Ihr Browser automatisch an den Server übermittelt. Diese Verarbeitung erfolgt durch unseren Hosting-Anbieter GitHub Pages. Es werden folgende Daten verarbeitet, die technisch erforderlich sind, um unsere Internetseite anzuzeigen und um deren Stabilität und Sicherheit zu gewährleisten:
 
 - IP-Adresse des anfragenden Rechners
 - Datum und Uhrzeit der Anfrage
@@ -46,7 +46,7 @@ Unsere Internetseite ist eine reine Informationsseite ohne Registrierung, Login,
 
 Die Verarbeitung dieser Daten in sog. Logfiles ist erforderlich, um unsere Internetseite anzuzeigen und die Stabilität und Sicherheit zu gewährleisten.
 
-**Reichweiten- und Kampagnenanalyse (PostHog):** Um zu erkennen, über welchen Kanal Besucher auf unsere Internetseite gelangen (z. B. über einen QR-Code auf unserem Flyer oder über unsere Profile in sozialen Netzwerken), setzen wir das Analyse-Tool PostHog ein (Anbieter: PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA; betrieben über die europäische Cloud-Instanz von PostHog mit Serverstandort Frankfurt am Main). Dabei werden folgende Daten verarbeitet:
+**Reichweiten- und Kampagnenanalyse (PostHog):** Um zu erkennen, über welchen Kanal Besucher auf unsere Internetseite gelangen (z. B. über einen QR-Code auf unserem Flyer oder über unsere Profile in sozialen Netzwerken), setzen wir das Analyse-Tool PostHog ein (Anbieter: PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA; betrieben über die europäische Cloud-Instanz von PostHog mit Serverstandort Frankfurt am Main). PostHog wird dabei erst aktiv, nachdem Sie dem im Banner am unteren Bildschirmrand aktiv zugestimmt haben (siehe Abschnitt XVI); ohne Ihre Zustimmung findet keine Verarbeitung durch PostHog statt. Nach Ihrer Zustimmung werden folgende Daten verarbeitet:
 
 - IP-Adresse des anfragenden Geräts
 - aufgerufene Seiten-URL, ggf. inkl. Kampagnenkennzeichnung (UTM-Parameter, z. B. „utm_source=tiktok")
@@ -69,13 +69,12 @@ Weitere Datenkategorien (z. B. Vertragsdaten, Zahlungsdaten, Bestandsdaten im Ra
 - Gewährleistung eines reibungslosen Verbindungsaufbaus zu unserer Internetseite
 - Auswertung und Gewährleistung der Systemsicherheit und -stabilität
 - Beantwortung etwaiger Kontaktanfragen per E-Mail
-- Darstellung der Internetseite mit einheitlichem Schriftbild (Google Fonts)
-- Anzeige eines verlinkten App-Store-Badges (Apple)
+- Darstellung der Internetseite mit einheitlichem Schriftbild (lokal eingebundene Schriftarten, keine Übermittlung an Dritte)
 - Analyse, über welchen Kanal (z. B. Social-Media-Profile, QR-Codes) Besucher auf unsere Seite gelangen, zur Erfolgsmessung von Marketingmaßnahmen
 
-**Rechtsgrundlage:** Soweit keine speziellere Rechtsgrundlage angegeben ist, beruht die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO (Wahrung berechtigter Interessen). Unser berechtigtes Interesse folgt dabei aus den oben genannten Zwecken. Bei Anfragen, die auf den Abschluss oder die Durchführung eines Vertrages gerichtet sind, kann zusätzlich Art. 6 Abs. 1 lit. b DSGVO einschlägig sein.
+**Rechtsgrundlage:** Soweit keine speziellere Rechtsgrundlage angegeben ist, beruht die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO (Wahrung berechtigter Interessen). Unser berechtigtes Interesse folgt dabei aus den oben genannten Zwecken. Bei Anfragen, die auf den Abschluss oder die Durchführung eines Vertrages gerichtet sind, kann zusätzlich Art. 6 Abs. 1 lit. b DSGVO einschlägig sein. Die Verarbeitung durch PostHog beruht auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie über das Banner erteilen und jederzeit mit Wirkung für die Zukunft widerrufen können (siehe Abschnitt XVI).
 
-Eine Offenlegung Ihrer Daten gegenüber Dritten erfolgt nur gegenüber unserem Hosting-Anbieter sowie den in Abschnitt VI genannten Drittanbietern im Rahmen der Auftragsverarbeitung bzw. der technisch bedingten Datenübermittlung. Eine darüber hinausgehende Weitergabe an Dritte findet nicht statt.
+Eine Offenlegung Ihrer Daten gegenüber Dritten erfolgt nur gegenüber unserem Hosting-Anbieter sowie dem in Abschnitt VI genannten Analyse-Dienstleister PostHog im Rahmen der beschriebenen Datenverarbeitung. Eine darüber hinausgehende Weitergabe an Dritte findet nicht statt.
 
 ## VI. An wen übermitteln wir Ihre Daten?
 
@@ -85,15 +84,13 @@ Wir arbeiten mit folgenden Dienstleistern zusammen:
 
 Beim Aufruf unserer Internetseite verarbeitet GitHub als Hosting-Anbieter automatisch die in Abschnitt V genannten technischen Zugriffsdaten (Server-Logfiles). Auf diese Logdaten haben wir als Betreiber der Inhalte keinen Zugriff und keine Möglichkeit zur Einsichtnahme oder Löschung einzelner Einträge.
 
-**Analyse-Tool (PostHog):** PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA, betrieben über die europäische Cloud-Instanz von PostHog (Serverstandort Frankfurt am Main, Deutschland). PostHog wird auf allen Seiten unseres Internetauftritts eingesetzt, um zu analysieren, über welchen Kanal Besucher zu uns gelangen (siehe Abschnitt V). Es werden dabei keine Cookies gesetzt. Weitere Informationen finden Sie in der Datenschutzerklärung von PostHog: https://posthog.com/privacy
+**Analyse-Tool:** PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA, betrieben über die europäische Cloud-Instanz von PostHog (Serverstandort Frankfurt am Main, Deutschland). PostHog wird auf allen Seiten unseres Internetauftritts eingesetzt, um zu analysieren, über welchen Kanal Besucher zu uns gelangen (siehe Abschnitt V) – jedoch erst, nachdem Sie im Consent-Banner zugestimmt haben (siehe Abschnitt XVI). Es werden dabei keine Cookies gesetzt. Weitere Informationen finden Sie in der Datenschutzerklärung von PostHog: https://posthog.com/privacy
 
-**Schriftarten (Google Fonts):** Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland (Mutterkonzern: Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA)
+**Externe Links (keine Datenübermittlung beim Seitenaufruf):** Schriftarten und Bilder unserer Internetseite werden lokal ausgeliefert; beim bloßen Aufruf unserer Seite werden keine Daten an weitere Drittanbieter übermittelt. Unsere Seite enthält jedoch Verweise (Links) auf externe Angebote. Erst wenn Sie einem solchen Link folgen, verlassen Sie unsere Internetseite; ab diesem Zeitpunkt gilt die Datenschutzerklärung des jeweiligen Anbieters.
 
-Unsere Internetseite bindet Schriftarten über die Google Fonts API ein. Beim Seitenaufruf stellt Ihr Browser eine direkte Verbindung zu den Servern von Google her, um die entsprechenden Schriftdateien zu laden. Dabei wird Ihre IP-Adresse automatisch an Google übermittelt. Dies ist technisch erforderlich, um die Schriftarten darstellen zu können. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen und ansprechenden Darstellung unserer Internetseite). Weitere Informationen finden Sie in der Datenschutzerklärung von Google: https://policies.google.com/privacy
+**Terminbuchung (Cal.com):** Cal.com, Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA. Über einen Link auf unserer Seite können Sie einen Gesprächstermin mit uns buchen; die Buchungsseite läuft über die europäische Instanz von Cal.com („Cal.eu", cal.eu/vamit) mit Datenspeicherung in der EU. Die Buchung findet vollständig auf dieser Website von Cal.com statt. Dabei verarbeitet Cal.com die von Ihnen dort eingegebenen Daten (z. B. Name, E-Mail-Adresse, gewählter Termin, optionale Nachricht); wir erhalten diese Daten zur Vorbereitung und Durchführung des Termins. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen auf Ihre Anfrage). Weitere Informationen finden Sie in der Datenschutzerklärung von Cal.com: https://cal.com/privacy
 
-**App-Store-Badge (Apple):** Apple Inc., One Apple Park Way, Cupertino, CA 95014, USA
-
-Unsere Internetseite zeigt ein Bild-Badge des Apple App Store, das direkt von den Servern von Apple (developer.apple.com) geladen wird. Beim Aufruf der Seite übermittelt Ihr Browser dabei Ihre IP-Adresse an Apple. Dies erfolgt technisch automatisch und ist für die Darstellung des Badges erforderlich. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bewerbung unserer App). Weitere Informationen finden Sie in der Datenschutzerklärung von Apple: https://www.apple.com/legal/privacy/de-ww/
+**Apple App Store:** Unsere Seite verlinkt auf den Eintrag unserer App im Apple App Store. Das Badge-Bild wird lokal von unserer Seite ausgeliefert; Daten werden erst an Apple übermittelt, wenn Sie dem Link in den App Store folgen. Weitere Informationen finden Sie in der Datenschutzerklärung von Apple: https://www.apple.com/legal/privacy/de-ww/
 
 ## VII. Werden Ihre Daten an Stellen außerhalb der EU übermittelt?
 
@@ -101,9 +98,7 @@ Ja, im Rahmen der Nutzung der in Abschnitt VI genannten Dienste werden Daten in 
 
 **GitHub Pages:** GitHub, Inc. ist als Tochterunternehmen der Microsoft Corporation eigenständig unter dem **EU-U.S. Data Privacy Framework (DPF)** zertifiziert. Die Europäische Kommission hat mit Angemessenheitsbeschluss vom 10. Juli 2023 bestätigt, dass hierdurch ein angemessenes Datenschutzniveau gewährleistet wird (Art. 45 DSGVO). Gegen diesen Beschluss ist derzeit ein Rechtsmittelverfahren vor dem Europäischen Gerichtshof anhängig; die Angemessenheitsentscheidung ist bis zu einer etwaigen Aufhebung weiterhin gültig und anwendbar. Weitere Informationen: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement
 
-**Google Fonts:** Google LLC ist unter dem **EU-U.S. Data Privacy Framework (DPF)** zertifiziert, sodass ein angemessenes Datenschutzniveau im Sinne von Art. 45 DSGVO gewährleistet ist. Weitere Informationen: https://policies.google.com/privacy
-
-**Apple:** Apple Inc. ist unter dem **EU-U.S. Data Privacy Framework (DPF)** zertifiziert, sodass ein angemessenes Datenschutzniveau im Sinne von Art. 45 DSGVO gewährleistet ist. Weitere Informationen: https://www.apple.com/legal/privacy/de-ww/
+**Cal.com:** Sofern Sie freiwillig über den verlinkten Buchungsdienst einen Termin buchen, verarbeitet Cal.com, Inc. die von Ihnen dort eingegebenen Daten. Wir nutzen dafür die europäische Instanz von Cal.com („Cal.eu"); die Buchungsdaten werden dabei innerhalb der EU gespeichert und verarbeitet. Cal.com, Inc. als Anbieter dieses Dienstes hat zwar ihren Sitz in den USA; die eigentliche Datenverarbeitung erfolgt jedoch innerhalb der EU. Soweit im Rahmen von Support oder Systemadministration ein Zugriff aus einem Drittland nicht vollständig ausgeschlossen werden kann, hat Cal.com hierfür geeignete Garantien (u. a. EU-Standardvertragsklauseln) vorgesehen. Die Übermittlung erfolgt ausschließlich auf Ihre aktive Nutzung des Dienstes hin; beim bloßen Besuch unserer Internetseite findet keine Übermittlung an Cal.com statt. Weitere Informationen: https://cal.com/privacy
 
 **PostHog:** Die von PostHog verarbeiteten Daten werden auf Servern der europäischen PostHog-Cloud-Instanz in Frankfurt am Main gespeichert und verarbeitet. PostHog Inc. als Anbieter dieses Dienstes hat zwar ihren Sitz in den USA; die eigentliche Datenverarbeitung erfolgt jedoch innerhalb der EU. Soweit im Rahmen von Support oder Systemadministration ein Zugriff aus einem Drittland nicht vollständig ausgeschlossen werden kann, hat PostHog hierfür geeignete Garantien (u. a. EU-Standardvertragsklauseln) vorgesehen. Weitere Informationen: https://posthog.com/privacy
 
@@ -127,7 +122,7 @@ Hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten haben Sie uns gegen�
 - sich bei einer Aufsichtsbehörde zu beschweren (Art. 77 DSGVO);
 - aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener Daten, die auf Art. 6 Abs. 1 lit. f DSGVO beruht, Widerspruch einzulegen (Art. 21 DSGVO).
 
-Eine automatisierte Entscheidung einschließlich Profiling (Art. 22 DSGVO) findet nicht statt; eine Einwilligung im Sinne von Art. 7 Abs. 3 DSGVO holen wir auf unserer Internetseite nicht ein.
+Eine automatisierte Entscheidung einschließlich Profiling (Art. 22 DSGVO) findet nicht statt. Soweit wir eine Einwilligung einholen (siehe Abschnitt XVI, PostHog-Banner), können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO) – über den Link „Datenschutz-Einstellungen", der auf jeder Seite eingeblendet wird.
 
 ## X. Wann und wie können Sie der Datenverarbeitung widersprechen?
 
@@ -144,12 +139,11 @@ Kavalleriestraße 2–4
 40213 Düsseldorf
 https://www.ldi.nrw.de
 
-Eine Liste aller Landesdatenschutzaufsichtsbehörden findet sich unter:
-https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html
+Eine Liste aller Landesdatenschutzaufsichtsbehörden findet sich unter: https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html
 
 ## XII. Wann und warum ist die Bereitstellung Ihrer Daten erforderlich?
 
-Beim Besuch unserer Internetseite ist die Verarbeitung der in Abschnitt V genannten technischen Daten zwingend erforderlich, um Ihnen die Seite anzeigen zu können; eine Nichtbereitstellung ist insoweit technisch nicht möglich (Sie können die Seite dann nicht aufrufen). Dies gilt auch für die Datenübermittlung an Google und Apple, die beim Laden der jeweiligen externen Inhalte (Schriftarten, App-Badge) technisch automatisch erfolgt.
+Beim Besuch unserer Internetseite ist die Verarbeitung der in Abschnitt V genannten technischen Daten zwingend erforderlich, um Ihnen die Seite anzeigen zu können; eine Nichtbereitstellung ist insoweit technisch nicht möglich (Sie können die Seite dann nicht aufrufen). Die Nutzung des verlinkten Terminbuchungsdienstes (Cal.com) ist freiwillig; ohne Ihre Daten kann dort lediglich kein Termin gebucht werden. Sie können uns stattdessen jederzeit per E-Mail kontaktieren.
 
 Bei einer Kontaktaufnahme per E-Mail ist die Bereitstellung Ihrer Daten freiwillig. Eine Nichtbereitstellung hätte zur Folge, dass wir Ihre Anfrage nicht beantworten können.
 
@@ -169,7 +163,9 @@ Unsere Internetseite wird über GitHub Pages ausschließlich verschlüsselt mitt
 
 ## XVI. Setzen wir Cookies ein?
 
-Unsere Internetseite selbst setzt keine eigenen Cookies und keine Cookies von Drittanbietern ein. Für die in Abschnitt V beschriebene Kanal- und Kampagnenanalyse verwenden wir das Analyse-Tool PostHog – bewusst so konfiguriert, dass dabei ebenfalls keine Cookies gesetzt und keine Daten im Browser gespeichert werden. Es findet daher kein cookiebasiertes Tracking, keine dauerhafte Wiedererkennung einzelner Besucher und kein Online-Marketing über Cookies statt.
+Unsere Internetseite selbst setzt keine eigenen Cookies und keine Cookies von Drittanbietern ein. Für die in Abschnitt V beschriebene Kanal- und Kampagnenanalyse verwenden wir das Analyse-Tool PostHog – bewusst so konfiguriert, dass dabei ebenfalls keine Cookies gesetzt und keine Daten im Browser gespeichert werden. Es findet daher kein cookiebasiertes Tracking und kein Online-Marketing über Cookies statt.
+
+**Consent-Banner:** Beim ersten Besuch unserer Internetseite zeigen wir Ihnen ein Banner am unteren Bildschirmrand mit den gleichwertigen Optionen „Akzeptieren" und „Ablehnen". PostHog wird erst aktiv, wenn Sie aktiv auf „Akzeptieren" klicken; bei „Ablehnen" oder solange Sie keine Auswahl treffen, findet keinerlei Analyse statt. Ihre Entscheidung speichern wir technisch bedingt in Ihrem Browser (Local Storage), damit Ihnen das Banner nicht bei jedem erneuten Besuch angezeigt wird; diese Speicherung selbst ist technisch notwendig und erfordert keine gesonderte Einwilligung. Über den Link „Datenschutz-Einstellungen", der dauerhaft am unteren Bildschirmrand jeder Seite eingeblendet wird, können Sie Ihre Entscheidung jederzeit einsehen und ändern bzw. Ihre Einwilligung mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO).
 
 ## XVII. Betreiben wir Profile in sozialen Netzwerken?
 
@@ -178,3 +174,5 @@ Nein. Wir betreiben derzeit keine Profile in sozialen Netzwerken, die mit dieser
 ## XVIII. Aktualität und Änderung dieser Datenschutzerklärung
 
 Diese Datenschutzerklärung hat den Stand August 2026. Durch die Weiterentwicklung unserer Internetseite (z. B. Einbindung eines Kontaktformulars, von Analyse-Tools oder Social-Media-Profilen) oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Fassung kann jederzeit auf dieser Internetseite abgerufen werden.
+
+Stand: August 2026
