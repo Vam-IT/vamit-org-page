@@ -254,6 +254,7 @@ h1 strong { font-weight: 700; }
 .btn-ghost-dark:hover { background: white; color: var(--ink); }
 
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-sub-short { display: none; }
 
 /* ── COMMITMENTS STRIP ───────────────────── */
 .commit-strip {
@@ -866,6 +867,28 @@ h2 strong { font-weight: 700; }
   cursor: pointer;
 }
 
+.contact-form[hidden] { display: none; }
+
+.contact-form-success {
+  background: var(--panel-light);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.contact-form-success h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.contact-form-success p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 /* ── LEGAL / PROSE PAGES ─────────────────── */
 .prose {
   max-width: 760px;
@@ -1047,6 +1070,18 @@ footer {
   }
 
   .hero-wrap, .section-wrap, .cta-band, footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+
+  /* Mobile hero: 86% of traffic is mobile, and the original spacing pushed
+     the primary CTA buttons roughly 1.5 screens down. Tighten padding/margins
+     and swap in a shorter hero-sub so the CTA sits in the first viewport. */
+  .hero { padding: 5.5rem 0 2.5rem; min-height: auto; }
+  .hero--page { padding: 5.5rem 0 2.5rem; }
+  .hero-eyebrow { margin-bottom: 1.1rem; }
+  h1 { font-size: 2.3rem; }
+  .hero-sub { margin-bottom: 1.75rem; line-height: 1.55; }
+  .hero-sub-full { display: none; }
+  .hero-sub-short { display: block; }
+  .commit-strip { margin-top: 2rem; padding-top: 1.25rem; }
   .commit-strip { grid-template-columns: 1fr 1fr; }
   .services-grid { grid-template-columns: 1fr; }
   .app-grid { flex-direction: column; align-items: flex-start; gap: 2rem; }

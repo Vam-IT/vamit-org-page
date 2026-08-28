@@ -1,29 +1,27 @@
-// Static site with no backend (GitHub Pages), so the contact form can't
-// POST anywhere. Instead it builds a mailto: link from the entered fields
-// and navigates to it, which opens the visitor's own mail client prefilled
-// -- same delivery channel the rest of the site already relies on.
+// The contact form now posts directly to FormSubmit (a hosted form backend
+// that needs no server of our own -- fits the GitHub Pages static site) and
+// emails the submission to info@vam-it.com, with Reply-To set to the value
+// of the "email" field. No JS is required for the submission itself; this
+// script only handles the post-submit "thank you" state.
+//
+// FormSubmit redirects back to kontakt.html?gesendet=1 after a successful
+// submit (see the _next hidden field). We detect that here, swap the form
+// for a short confirmation message, and clean the URL so a refresh/back
+// doesn't re-trigger it.
 (function () {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('gesendet') !== '1') return;
+
   var form = document.getElementById('contactForm');
-  if (!form) return;
-
-  function buildMailtoUrl(name, company, message) {
-    var subject = 'Anfrage von ' + name;
-    var bodyLines = ['Name: ' + name];
-    if (company) bodyLines.push('Firma: ' + company);
-    bodyLines.push('', message);
-
-    return 'mailto:info@vam-it.com' +
-      '?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(bodyLines.join('\n'));
+  var success = document.getElementById('contactFormSuccess');
+  if (form) form.hidden = true;
+  if (success) {
+    success.hidden = false;
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    var name = form.name.value.trim();
-    var company = form.company.value.trim();
-    var message = form.message.value.trim();
-
-    window.location.href = buildMailtoUrl(name, company, message);
-  });
+  params.delete('gesendet');
+  var newSearch = params.toString();
+  var newUrl = window.location.pathname + (newSearch ? '?' + newSearch : '') + window.location.hash;
+  window.history.replaceState(null, '', newUrl);
 })();
