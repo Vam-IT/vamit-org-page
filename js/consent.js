@@ -76,7 +76,16 @@
       'font-family:Inter,sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.03em;',
       'padding:0.45rem 0.8rem;border-radius:999px;cursor:pointer;',
       'background:#1A2536;color:#94A3B8;border:1px solid #2D3A4F;}',
-      '.vamit-consent-toggle:hover{color:#00F5FF;border-color:#00F5FF;}'
+      '.vamit-consent-toggle:hover{color:#00F5FF;border-color:#00F5FF;}',
+      /* Compact layout on small screens -- the banner used to eat roughly a
+         third of the viewport on mobile (where 86% of visitors are), pushing
+         page content further down right when the CTA should be in view. */
+      '@media (max-width:480px){',
+      '.vamit-consent-banner{padding:0.85rem 1rem;font-size:0.8rem;gap:0.6rem;}',
+      '.vamit-consent-text{flex-basis:100%;}',
+      '.vamit-consent-actions{width:100%;}',
+      '.vamit-consent-btn{flex:1;padding:0.55rem 0.7rem;font-size:0.78rem;}',
+      '}'
     ].join('');
     document.head.appendChild(style);
   }
