@@ -684,6 +684,31 @@ h2 strong { font-weight: 700; }
 
 .section-wrap--dark .prose-cols p { color: var(--muted-dark); }
 
+.team-skills {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: 1.25rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.team-skill {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--ink);
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.team-skill-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
 /* ── APP PROOF ───────────────────────────── */
 .app-grid {
   display: flex;
@@ -798,6 +823,22 @@ h2 strong { font-weight: 700; }
 }
 
 .contact-card .plain-link:hover { text-decoration: underline; }
+
+.footer-col address { font-style: normal; }
+.footer-col address a { color: var(--muted-dark); text-decoration: none; }
+.footer-col address a:hover { color: var(--on-dark); text-decoration: underline; }
+
+.contact-card address {
+  font-style: normal;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.contact-card address a {
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 500;
+}
+.contact-card address a:hover { text-decoration: underline; }
 
 .contact-form-wrap {
   margin-top: 3rem;
@@ -917,7 +958,7 @@ h2 strong { font-weight: 700; }
 
 .prose ul { padding-left: 1.25rem; }
 
-.prose a { color: var(--teal); }
+.prose a { color: var(--teal); overflow-wrap: break-word; word-break: break-word; }
 
 .prose address {
   font-style: normal;
