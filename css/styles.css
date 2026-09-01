@@ -594,10 +594,16 @@ h2 strong { font-weight: 700; }
 
 .offer-note {
   font-size: 0.8rem;
-  color: var(--muted-dark);
+  color: var(--muted);
   margin-top: 1rem;
   line-height: 1.6;
 }
+
+/* Auf dunklem Grund die hellere Sekundärfarbe — die Klasse wird inzwischen in
+   beiden Kontexten verwendet. */
+.offer-box .offer-note,
+.section-wrap--dark .offer-note,
+.cta-band .offer-note { color: var(--muted-dark); }
 
 /* ── FAQ ─────────────────────────────────── */
 .faq-item {
@@ -1133,4 +1139,320 @@ footer {
 @media (max-width: 480px) {
   h1 { font-size: 2.4rem; }
   .commit-strip { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+/* ── BATTERIEPASS: Stichtag, Check-Formular, Ergebnis ──────
+   Ergänzt das bestehende Token-System, ohne es zu verändern:
+   dunkle Flächen nutzen --panel/--on-dark/--cyan, helle --paper/--ink/--teal. */
+
+/* Stichtags-Band (dunkle Sektion) */
+.deadline-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--panel);
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+}
+.deadline-figure {
+  display: flex;
+  flex-direction: column;
+  min-width: 9rem;
+}
+.deadline-days {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--cyan);
+  font-variant-numeric: tabular-nums;
+}
+.deadline-unit {
+  font-size: 0.85rem;
+  color: var(--muted-dark);
+  margin-top: 0.4rem;
+}
+.deadline-text { flex: 1 1 22rem; }
+.deadline-text p { color: var(--on-dark); margin: 0; }
+.deadline-text strong { color: var(--cyan); }
+
+/* Check-Formular */
+.check-form { max-width: 46rem; }
+.check-step {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  background: #fff;
+}
+/* Die Schrittnummern kommen aus einem CSS-Zähler statt aus dem Markup.
+   Grund: Die Batterie-Rückfragen werden für andere Produktgruppen ausgeblendet
+   (`hidden` → `display:none`), und ausgeblendete Elemente erhöhen keinen Zähler.
+   Mit festen Nummern sprang die Zählung sonst von 01 auf 04. */
+.check-form { counter-reset: schritt; }
+.check-step { counter-increment: schritt; }
+.check-step legend {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  padding: 0 0.5rem;
+  color: var(--ink);
+  /* Kein Flex-Layout: Sonst quetscht die Nummer den Text in eine schmale
+     Spalte, und lange Fragen brechen mitten im Wort um. */
+  text-wrap: balance;
+}
+.check-step legend::before {
+  content: counter(schritt, decimal-leading-zero);
+  display: inline-block;
+  margin-right: 0.6rem;
+  color: var(--teal);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  vertical-align: 0.12em;
+}
+/* Tiefgestelltes im Fließtext soll die Zeilenhöhe nicht sprengen. */
+.check-step legend sub { line-height: 0; }
+.check-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.check-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--paper);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.check-option:hover { border-color: var(--teal); background: var(--panel-light); }
+.check-option input { margin-top: 0.25rem; accent-color: var(--teal); flex: none; }
+.check-option span { display: flex; flex-direction: column; }
+.check-option strong { font-size: 0.95rem; }
+.check-option small { color: var(--muted); font-size: 0.82rem; margin-top: 0.15rem; }
+.check-option:focus-within { outline: 2px solid var(--teal); outline-offset: 2px; }
+.check-option:has(input:checked) { border-color: var(--teal); background: var(--cyan-l); }
+
+/* Ergebnis */
+.check-result {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  scroll-margin-top: 5rem;
+}
+.check-verdict {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--teal);
+  background: var(--panel-light);
+  margin-bottom: 1.25rem;
+}
+.check-verdict--affected { border-left-color: #B4530F; background: #FDF1E7; }
+.check-verdict--indirect { border-left-color: var(--teal); background: var(--cyan-l); }
+.check-verdict--neutral  { border-left-color: var(--muted); background: var(--panel-light); }
+.check-result p { margin-bottom: 1rem; }
+.check-hint {
+  padding: 1rem 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.check-next {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+.check-next h3 { font-family: var(--font-display); margin-bottom: 0.75rem; }
+.check-context {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .deadline-band { padding: 1.25rem; gap: 1rem; }
+  .check-step { padding: 1.15rem; }
+  .check-result { padding: 1.35rem; }
+}
+
+/* ── PRODUKTPASS: Zeitplan-Tabelle, helle Variante des Stichtags-Bands ──── */
+
+/* Breite Tabellen scrollen in ihrem eigenen Container, damit die Seite
+   auf dem Telefon nie seitwärts scrollt. */
+.tblwrap {
+  overflow-x: auto;
+  margin: 1.5rem 0 1rem;
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.dpp-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 34rem;
+  font-size: 0.92rem;
+}
+.dpp-table caption {
+  text-align: left;
+  padding: 1rem 1.25rem 0;
+  font-size: 0.8rem;
+  color: var(--muted-dark);
+}
+.dpp-table th,
+.dpp-table td {
+  text-align: left;
+  padding: 0.8rem 1.25rem;
+  border-bottom: 1px solid var(--border-dark);
+  color: var(--on-dark);
+  font-weight: 400;
+  vertical-align: top;
+}
+.dpp-table thead th {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted-dark);
+  font-weight: 700;
+}
+.dpp-table tbody th { font-weight: 600; }
+.dpp-table tbody tr:last-child th,
+.dpp-table tbody tr:last-child td { border-bottom: none; }
+
+/* Die einzige Zeile mit feststehendem Termin wird hervorgehoben — sie ist
+   der Grund, warum die Seite überhaupt jetzt handlungsrelevant ist. */
+.dpp-row--now th,
+.dpp-row--now td { background: rgba(0, 245, 255, 0.06); }
+.dpp-row--now td strong { color: var(--cyan); }
+
+/* Stichtags-Band auf hellem Grund (Pillar-Seite) */
+.deadline-band--light {
+  background: #fff;
+  border-color: var(--line);
+}
+.deadline-band--light .deadline-days { color: var(--teal); }
+.deadline-band--light .deadline-unit { color: var(--muted); }
+.deadline-band--light .deadline-text p { color: var(--ink); }
+.deadline-band--light .deadline-text strong { color: var(--teal); }
+
+@media (max-width: 640px) {
+  .dpp-table th,
+  .dpp-table td { padding: 0.7rem 0.9rem; }
+}
+
+/* ── ANKERZIELE ────────────────────────────────────────────
+   Die Navigation liegt fixiert über dem Inhalt. Ohne diesen Abstand
+   verschwindet die Abschnittsüberschrift beim Sprung auf einen Anker
+   hinter der Leiste — betrifft auch die bestehenden Anker auf
+   leistungen.html. */
+main [id],
+.section-wrap[id],
+.hero[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Hinweis unter einem Abschnitt — kleiner als .section-intro, oben abgesetzt */
+.section-note {
+  margin-top: 1.75rem;
+  max-width: 62ch;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.section-note a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.section-wrap--dark .section-note { color: var(--muted-dark); }
+.section-wrap--dark .section-note a { color: var(--cyan); }
+
+/* Fünf Karten in einem Vierer- oder Zweierraster lassen eine Lücke. Statt die
+   Spaltenzahl zu verbiegen, läuft die letzte Karte über die volle Breite. */
+.services-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (min-width: 769px) and (max-width: 1040px) {
+  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Muss nach der Vierer-Regel stehen, sonst greift auf dem Telefon wieder das
+   Raster von oben. */
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+.service-card--wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+  gap: 0 3rem;
+  align-items: start;
+}
+
+.service-card--wide .service-num { grid-column: 1 / -1; margin-bottom: 1.25rem; }
+.service-card--wide h3 { margin-bottom: 0; }
+.service-card--wide .service-card__body { min-width: 0; }
+.service-card--wide p { max-width: 66ch; }
+.service-card--wide .service-tags { margin-top: 1rem; }
+
+@media (max-width: 768px) {
+  .service-card--wide { grid-template-columns: 1fr; gap: 0; }
+  .service-card--wide h3 { margin-bottom: 0.6rem; }
+}
+
+/* Zwei Eigenprodukte nebeneinander — vorher stand alles in einer Spalte und die
+   rechte Hälfte blieb auf dem Desktop leer. */
+.app-text .app-lead { max-width: 64ch; }
+
+.produkt-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+  border-top: 1px solid var(--line);
+  padding-top: 2.5rem;
+}
+
+.app-text .produkt-status {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.75rem;
+}
+
+.produkt h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.9rem;
+}
+
+.app-text .produkt p { font-size: 0.95rem; max-width: none; margin-bottom: 1.75rem; }
+
+@media (max-width: 860px) {
+  .produkt-cols { grid-template-columns: 1fr; gap: 2.5rem; }
 }

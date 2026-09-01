@@ -23,4 +23,13 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://vam-it.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://vam-it.com/en/" />
   </url>
+  <url>
+    <loc>https://vam-it.com/digitaler-produktpass.html</loc>
+  </url>
+  <url>
+    <loc>https://vam-it.com/batteriepass.html</loc>
+  </url>
+  <url>
+    <loc>https://vam-it.com/produktpass-check.html</loc>
+  </url>
 </urlset>

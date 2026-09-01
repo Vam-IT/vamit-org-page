@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digitaler Produktpass (DPP): Pflichten, Produktgruppen, Fristen | VAMIT</title>
+  <meta name="description" content="Der digitale Produktpass nach EU-Ökodesign-Verordnung (ESPR): Welche Produktgruppen wann betroffen sind, welche Daten der Pass enthalten muss, wie er technisch funktioniert — und was Hersteller jetzt vorbereiten sollten. Mit kostenlosem Betroffenheits-Check." />
+  <link rel="canonical" href="https://vam-it.com/digitaler-produktpass.html" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D1421" />
+  <link rel="preload" href="/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="/js/lang.js"></script>
+  <script defer src="/js/consent.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was ist der digitale Produktpass?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Der digitale Produktpass (DPP) ist ein maschinenlesbarer Datensatz, der über einen Datenträger am Produkt — meist einen QR-Code — abrufbar ist. Er enthält Angaben zu Zusammensetzung, Herkunft, Reparatur und Entsorgung. Rechtsgrundlage ist die Ökodesign-Verordnung (EU) 2024/1781, die den Rahmen setzt; die konkreten Datenanforderungen legt die EU je Produktgruppe in eigenen delegierten Rechtsakten fest." }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Produktgruppen sind wann betroffen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Batterien sind als erste betroffen: Für sie gilt die Passpflicht bereits ab dem 18. Februar 2027 über die eigenständige Batterieverordnung. Über den ESPR-Arbeitsplan folgen Eisen und Stahl, Textilien, Reifen und Aluminium, später Möbel und Matratzen — mit delegierten Rechtsakten zwischen 2026 und 2029 und Compliance-Terminen etwa zwei Jahre danach." }
+      },
+      {
+        "@type": "Question",
+        "name": "Sind die Daten im digitalen Produktpass öffentlich?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nur teilweise. Der Pass unterscheidet Zugriffsebenen: öffentliche Angaben für jeden Scan, eingeschränkte Angaben für Marktüberwachungsbehörden, Zoll und Recyclingbetriebe sowie dynamische Betriebsdaten. Wettbewerbsrelevante Details wie die vollständige Stückliste bleiben geschützt." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist die EU-DPP-Registry?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Die zentrale Registry der EU-Kommission ist seit dem 20. Juli 2026 in Betrieb. Sie speichert ausschließlich eindeutige Kennungen und Metadaten; die eigentlichen Passinhalte bleiben beim Wirtschaftsakteur oder seinem Dienstleister. Zoll- und Marktüberwachungsbehörden greifen darüber elektronisch auf Produkte zu — für Importeure heißt das, die Registrierung muss vor der Einfuhr stehen." }
+      },
+      {
+        "@type": "Question",
+        "name": "Reicht ein PDF hinter einem QR-Code als Produktpass?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nein. Verlangt sind strukturierte, maschinenlesbare Daten mit einem dauerhaften eindeutigen Identifikator und rollenabhängigem Zugriff. Ein statisches PDF erfüllt weder die Zugriffsebenen noch die Pflicht, die Angaben über den Lebenszyklus aktuell zu halten." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">
+      <img class="logo-mark" src="assets/logo-mark.png" alt="" width="44" height="30" />
+      <span class="logo-word">VAM<span class="accent">IT</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a class="active" href="digitaler-produktpass.html">Digitaler Produktpass</a></li>
+      <li><a href="digitalisierungs-check.html">Digitalisierungs-Check</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a class="nav-lang" href="en/" lang="en" hreflang="en">EN</a></li>
+      <li><a class="nav-cta" href="kontakt.html">Erstgespräch</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+  <!-- HERO -->
+  <div class="hero-wrap">
+    <div class="hero hero--page">
+      <p class="hero-eyebrow">Ökodesign-Verordnung (EU) 2024/1781 · ESPR</p>
+      <h1>Der <strong>digitale Produktpass</strong> kommt — Produktgruppe für Produktgruppe.</h1>
+      <p class="hero-sub">
+        Künftig braucht praktisch jedes Produkt auf dem EU-Markt einen maschinenlesbaren Pass mit
+        Angaben zu Zusammensetzung, Herkunft, Reparatur und Entsorgung. Den Anfang machen
+        Batterien ab Februar 2027, danach folgen Stahl, Textilien, Reifen, Möbel und weitere.
+        Diese Seite ordnet ein, wen es wann trifft und was jetzt vorzubereiten ist.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="produktpass-check.html">Betroffenheit in 2 Minuten prüfen</a>
+        <a class="btn btn-ghost" href="#fahrplan">Zum Zeitplan der Produktgruppen</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAS IST DAS -->
+  <div class="section-wrap">
+    <div class="section-inner">
+      <p class="section-label">Worum es geht</p>
+      <h2>Ein Datensatz, <strong>der am Produkt hängt.</strong></h2>
+      <div class="prose prose-cols">
+        <p>
+          Der digitale Produktpass ist kein Dokument, sondern ein strukturierter Datensatz, der
+          über einen Datenträger am Produkt abrufbar ist — in der Regel ein QR-Code, zunehmend
+          auch ein NFC-Tag. Wer ihn scannt, sieht, woraus das Produkt besteht, woher es kommt,
+          wie es repariert und wie es entsorgt wird.
+        </p>
+        <p>
+          Der Zweck ist Kreislaufwirtschaft: Recyclingbetriebe sollen wissen, was sie vor sich
+          haben, Marktüberwachungsbehörden sollen prüfen können, und Käufer sollen vergleichen
+          können. Für Hersteller heißt das vor allem eines — Daten, die heute in Excel-Dateien
+          und PDF-Datenblättern verstreut liegen, müssen strukturiert und belegbar vorliegen.
+        </p>
+        <p>
+          Die <strong>ESPR</strong> setzt nur den Rahmen. Welche Felder ein Pass für Textilien
+          oder Möbel konkret enthalten muss, legt die EU je Produktgruppe in einem eigenen
+          delegierten Rechtsakt fest. Deshalb gibt es kein einheitliches Startdatum, sondern
+          eine Staffel.
+        </p>
+        <p>
+          Die Ausnahme ist die <strong>Batterieverordnung</strong>: Sie steht neben der ESPR,
+          ist bereits vollständig ausgearbeitet und macht Batterien zum ersten Produkt mit
+          Passpflicht.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAHRPLAN -->
+  <div class="section-wrap section-wrap--dark" id="fahrplan">
+    <div class="section-inner">
+      <p class="section-label">Zeitplan</p>
+      <h2 style="color:white;">Wer wann <strong>dran ist.</strong></h2>
+      <p class="section-intro" style="color:var(--muted-dark);">
+        Nach dem ESPR-Arbeitsplan 2025–2030. Zwischen dem delegierten Rechtsakt und dem
+        Zeitpunkt, ab dem Produkte den Pass tragen müssen, liegen erfahrungsgemäß rund zwei
+        Jahre — das ist der Zeitraum, in dem die Datenbeschaffung stattfinden muss.
+      </p>
+
+      <div class="tblwrap">
+        <table class="dpp-table">
+          <caption>Produktgruppen, Rechtsakt und erwarteter Compliance-Zeitpunkt</caption>
+          <thead>
+            <tr><th scope="col">Produktgruppe</th><th scope="col">Rechtsakt</th><th scope="col">Pass erforderlich ab</th></tr>
+          </thead>
+          <tbody>
+            <tr class="dpp-row--now">
+              <th scope="row">Batterien (EV, LMT, Industrie &gt; 2 kWh)</th>
+              <td>eigene Verordnung (EU) 2023/1542</td>
+              <td><strong>18.02.2027</strong> — feststehend</td>
+            </tr>
+            <tr>
+              <th scope="row">Eisen und Stahl</th>
+              <td>2026</td>
+              <td>ca. 2028</td>
+            </tr>
+            <tr>
+              <th scope="row">Textilien und Bekleidung</th>
+              <td>2027</td>
+              <td>ca. 2029</td>
+            </tr>
+            <tr>
+              <th scope="row">Reifen</th>
+              <td>2027</td>
+              <td>ca. 2029</td>
+            </tr>
+            <tr>
+              <th scope="row">Aluminium</th>
+              <td>2027</td>
+              <td>ca. 2029</td>
+            </tr>
+            <tr>
+              <th scope="row">Möbel</th>
+              <td>2028</td>
+              <td>ca. 2030</td>
+            </tr>
+            <tr>
+              <th scope="row">Matratzen</th>
+              <td>2029</td>
+              <td>ca. 2031</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="offer-note" style="color:var(--muted-dark);">
+        Die Termine der ESPR-Gruppen sind Planungsstand und können sich verschieben — bei
+        delegierten Rechtsakten war das bisher eher die Regel als die Ausnahme. Feststehend ist
+        allein der Batterie-Stichtag.
+      </p>
+    </div>
+  </div>
+
+  <!-- BATTERIE-VERWEIS -->
+  <div class="section-wrap">
+    <div class="section-inner">
+      <div class="deadline-band deadline-band--light">
+        <div class="deadline-figure">
+          <span class="deadline-days" id="deadlineDays" data-deadline="2027-02-18">—</span>
+          <span class="deadline-unit">Tage bis zum ersten Stichtag</span>
+        </div>
+        <div class="deadline-text">
+          <p>
+            <strong>Batterien sind der erste Fall — und der einzige mit festem Datum.</strong>
+            Wer Traktions-, Leichtverkehrs- oder Industriebatterien über 2&nbsp;kWh in Verkehr
+            bringt, braucht ab dem 18.&nbsp;Februar 2027 einen Pass. Ohne Übergangsfrist.
+          </p>
+          <p style="margin-top:0.75rem;">
+            <a class="app-link" href="batteriepass.html">Alles zum Batteriepass ↗</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECHNIK -->
+  <div class="section-wrap">
+    <div class="section-inner">
+      <p class="section-label">Wie es funktioniert</p>
+      <h2>Vom QR-Code zum Pass — <strong>in drei Schritten.</strong></h2>
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-num">01</span>
+          <h3>Datenträger am Produkt</h3>
+          <p>Ein QR-Code oder NFC-Tag trägt keine Datei, sondern eine Web-Adresse nach dem Standard <strong>GS1 Digital Link</strong>, die das Produkt eindeutig identifiziert. Die Norm EN&nbsp;18220 regelt Platzierung und Qualität.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">02</span>
+          <h3>Auflösung über den Resolver</h3>
+          <p>Beim Scan entscheidet ein Dienst des verantwortlichen Wirtschaftsakteurs, welche Zugriffsebene ausgeliefert wird. Derselbe Code zeigt dem Endkunden anderes als der Behörde oder dem Recyclingbetrieb.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">03</span>
+          <h3>Meldung an die EU-Registry</h3>
+          <p>Seit 20.&nbsp;Juli 2026 in Betrieb. Sie speichert nur Kennung und Metadaten — die Inhalte bleiben beim Unternehmen. Zoll und Marktüberwachung prüfen darüber elektronisch.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZUGRIFFSEBENEN -->
+  <div class="section-wrap">
+    <div class="section-inner">
+      <p class="section-label">Häufigste Sorge</p>
+      <h2>Nein, Sie müssen nicht <strong>Ihre Rezeptur offenlegen.</strong></h2>
+      <p class="section-intro">
+        Der häufigste Einwand gegen den Produktpass ist die Angst vor Transparenz gegenüber
+        Wettbewerbern. Sie ist unbegründet: Der Pass kennt drei Ebenen.
+      </p>
+      <div class="offer-grid">
+        <div class="offer-box">
+          <h3>Öffentlich</h3>
+          <p>Die vom Rechtsakt geforderten Angaben zu Zusammensetzung, Herkunft, Reparatur und Entsorgung. Für jeden sichtbar, der scannt.</p>
+        </div>
+        <div class="offer-box">
+          <h3>Eingeschränkt</h3>
+          <p>Konformitätsnachweise, Lieferkettendetails, Demontageanleitungen. Nur für Marktüberwachung, Zoll und Recyclingbetriebe.</p>
+        </div>
+        <div class="offer-box">
+          <h3>Dynamisch</h3>
+          <p>Betriebs- und Zustandsdaten, die über die Lebensdauer fortgeschrieben werden — etwa Ladezyklen bei Batterien.</p>
+        </div>
+      </div>
+      <p class="offer-note" style="margin-top:1.5rem;">
+        Geregelt ist das in der Norm <strong>EN&nbsp;18239</strong>. Seit 2026 gibt es eine ganze
+        europäische Normenreihe (EN&nbsp;182xx) zu Kennzeichnern, Datenträgern, Schnittstellen,
+        Aufbewahrung, Zugriffsrechten und der Echtheit der Passdaten. Wer heute ein System
+        aufsetzt, sollte gegen diese Normen bauen — nicht gegen eine eigene Interpretation.
+      </p>
+    </div>
+  </div>
+
+  <!-- WAS JETZT -->
+  <div class="section-wrap section-wrap--dark">
+    <div class="section-inner">
+      <p class="section-label">Was jetzt zu tun ist</p>
+      <h2 style="color:white;">Auch wer erst 2029 dran ist, <strong>fängt jetzt an.</strong></h2>
+      <p class="section-intro" style="color:var(--muted-dark);">
+        Das klingt nach Verkaufsargument, hat aber einen sachlichen Grund: Der langwierigste
+        Teil ist nicht die Software, sondern die Datenbeschaffung bei Zulieferern. Rezyklatanteile
+        und CO<sub>2</sub>-Werte liegen fast nirgends vor, und zwischen der ersten Anfrage und
+        einem belastbaren Wert vergehen erfahrungsgemäß Monate.
+      </p>
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-num">01</span>
+          <h3>Betroffenheit je Produktlinie klären</h3>
+          <p>Nicht je Unternehmen — die Pflicht knüpft an das Produkt an. Eine Linie kann betroffen sein, die nächste nicht.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">02</span>
+          <h3>Datenbestand ehrlich prüfen</h3>
+          <p>Welche geforderten Angaben liegen bereits vor, welche müssten erst erhoben werden? Der Befund ist selten schmeichelhaft.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">03</span>
+          <h3>Zulieferer früh einbinden</h3>
+          <p>Der einzige Schritt, dessen Dauer Sie nicht selbst bestimmen. Deshalb gehört er nach vorn.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">04</span>
+          <h3>Kennzeichnung nicht unterschätzen</h3>
+          <p>GTIN-Vergabe braucht eine GS1-Mitgliedschaft, und die Resolver-Domain steht nach dem ersten Druck dauerhaft auf dem Produkt.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-wrap">
+    <div class="section-inner">
+      <p class="section-label">Häufige Fragen</p>
+      <h2>Was Hersteller <strong>am häufigsten fragen.</strong></h2>
+
+      <div class="faq-item">
+        <h3>Betrifft der Produktpass auch kleine Unternehmen?</h3>
+        <p>Ja. Die Pflicht knüpft an das Produkt und den Akt des Inverkehrbringens an, nicht an die Unternehmensgröße. Kleinstunternehmen können in einzelnen Rechtsakten Erleichterungen erhalten, eine generelle Ausnahme für den Mittelstand gibt es aber nicht.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Wir sind Zulieferer. Betrifft uns das?</h3>
+        <p>Nicht als Passpflichtiger, praktisch aber sehr wohl: Ihre Kunden brauchen Materialdaten, Rezyklatanteile und CO<sub>2</sub>-Werte von Ihnen, um ihren Pass befüllen zu können. Wer liefern kann, wird bevorzugt — wer nicht, fällt aus der Kette. Das ist die eigentliche Breitenwirkung der Verordnung.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Reicht ein PDF hinter einem QR-Code?</h3>
+        <p>Nein. Verlangt sind strukturierte, maschinenlesbare Daten mit dauerhaftem Identifikator und rollenabhängigem Zugriff. Ein PDF erfüllt weder die Zugriffsebenen noch die Pflicht, die Angaben aktuell zu halten.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Wie lange muss der Pass verfügbar bleiben?</h3>
+        <p>Über die Lebensdauer des Produkts hinaus. Die Norm EN&nbsp;18221 verlangt, dass er auflösbar bleibt, auch wenn der Herausgeber nicht mehr existiert — praktisch heißt das, eine Sicherungskopie bei einem Dritten ist einzuplanen. Für ein Produkt mit zehn Jahren Lebensdauer ist das eine Zusage, die über die eigene Firmenplanung hinausreicht.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Was hat das mit CSRD, LkSG oder der Verpackungsverordnung zu tun?</h3>
+        <p>Die Datenbasis überschneidet sich erheblich. Wer für die Lieferkettenberichterstattung ohnehin Herkunfts- und Materialdaten erhebt, hat einen Teil der Passdaten bereits. Es lohnt sich, diese Erhebungen zusammenzudenken statt getrennt zu führen — sonst fragt man dieselben Zulieferer dreimal.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Sollen wir warten, bis unser Rechtsakt da ist?</h3>
+        <p>Mit dem Kauf einer Software: ja. Mit der Datenerhebung: nein. Die Felder unterscheiden sich je Produktgruppe, aber der aufwendige Teil — belastbare Angaben von Zulieferern zu bekommen — ist überall derselbe und dauert länger, als die Frist vermuten lässt.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUKT -->
+  <div class="section-wrap section-wrap--dark">
+    <div class="section-inner">
+      <p class="section-label">Woran wir arbeiten</p>
+      <h2 style="color:white;">Wir bauen die Software, <strong>die das erledigt.</strong></h2>
+      <div class="prose">
+        <p style="color:var(--on-dark);">
+          VAMIT entwickelt eine Anwendung, die diesen Ablauf abbildet: Produktdaten einlesen,
+          Lücken gegen den Pflichtenkatalog sichtbar machen, fehlende Werte automatisiert bei
+          Zulieferern anfragen und daraus den veröffentlichten Pass samt QR-Code erzeugen —
+          gebaut gegen GS1 Digital Link, die EU-Registry und die EN-182xx-Normen, betrieben
+          in der EU. Der Feldkatalog ist je Produktgruppe versioniert, damit neue Rechtsakte
+          eine Katalogversion sind und kein neues Projekt.
+        </p>
+        <p style="color:var(--muted-dark);">
+          Ehrlicherweise: Die Anwendung ist im Bau und noch nicht käuflich. Wir starten mit
+          Batterien, weil das die einzige Produktgruppe mit fertigem Datenmodell und festem
+          Termin ist. Wir suchen derzeit
+          <strong style="color:var(--on-dark);">Pilotkunden</strong> — auch aus Produktgruppen,
+          die später dran sind und die Datenbeschaffung jetzt angehen wollen.
+        </p>
+      </div>
+      <div class="hero-actions" style="margin-top:1.75rem;">
+        <a class="btn" href="produktpass-check.html">Betroffenheit prüfen</a>
+        <a class="btn btn-ghost" href="kontakt.html">Als Pilotkunde sprechen</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUELLEN -->
+  <div class="section-wrap">
+    <div class="section-inner">
+      <p class="section-label">Grundlage dieser Seite</p>
+      <h2>Quellen <strong>zum Nachlesen.</strong></h2>
+      <ul class="check-list">
+        <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1781/oj" target="_blank" rel="noopener">Verordnung (EU) 2024/1781 (ESPR) ↗</a> — Rahmen für den digitalen Produktpass</li>
+        <li><a href="https://eur-lex.europa.eu/eli/reg/2023/1542/oj" target="_blank" rel="noopener">Verordnung (EU) 2023/1542 (Batterien) ↗</a> — erste verbindliche Passpflicht</li>
+        <li><a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en" target="_blank" rel="noopener">Europäische Kommission: Digital Product Passport ↗</a> — inklusive DPP-Registry</li>
+        <li><a href="https://gs1.eu/activities/digital-product-passport/" target="_blank" rel="noopener">GS1 in Europe ↗</a> — GS1 Digital Link als Identifikator</li>
+        <li><a href="https://cirpass2.eu/" target="_blank" rel="noopener">CIRPASS-2 ↗</a> — Referenzarchitektur des Produktpasses</li>
+      </ul>
+      <p class="offer-note" style="margin-top:1.75rem;">
+        <strong>Hinweis:</strong> Diese Seite fasst den Stand vom 1. September 2026 fachlich und
+        redaktionell zusammen und ist <strong>keine Rechtsberatung</strong>. Die Verantwortung für
+        die Einhaltung der regulatorischen Pflichten liegt beim jeweiligen Wirtschaftsakteur.
+      </p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <h2>Unklar, ob und wann <strong>Sie betroffen sind?</strong></h2>
+      <p>
+        Der Betroffenheits-Check führt in zwei Minuten durch die entscheidenden Fragen — für
+        Batterien, Textilien, Stahl, Möbel und weitere Produktgruppen. Ohne Anmeldung, ohne
+        E-Mail-Adresse.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="produktpass-check.html">Check starten</a>
+        <a class="btn btn-ghost" href="kontakt.html">Lieber direkt sprechen</a>
+      </div>
+      <p class="cta-meta">Kostenlos · keine Registrierung · Ergebnis sofort auf dem Bildschirm</p>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img class="logo-mark" src="assets/logo-mark.png" alt="" width="50" height="34" />
+          <span class="logo-word">VAM<span class="accent">IT</span></span>
+        </div>
+        <p class="footer-tagline">IT-Beratung und Softwareentwicklung aus Bocholt für den Mittelstand in NRW.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="digitaler-produktpass.html">Digitaler Produktpass</a></li>
+          <li><a href="batteriepass.html">Batteriepass</a></li>
+          <li><a href="produktpass-check.html">Produktpass-Check</a></li>
+          <li><a href="digitalisierungs-check.html">Digitalisierungs-Check</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Kontakt</h3>
+        <ul>
+          <li><address><a href="https://www.google.com/maps/search/?api=1&amp;query=Petersfeldstra%C3%9Fe+16%2C+46395+Bocholt" target="_blank" rel="noopener">Petersfeldstraße 16, 46395 Bocholt</a></address></li>
+          <li><a href="mailto:info@vam-it.com">info@vam-it.com</a></li>
+          <li><a href="kontakt.html">Erstgespräch buchen</a></li>
+          <li><a href="https://vamiapp.com" target="_blank" rel="noopener">VAMI App ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VAMIT UG (haftungsbeschränkt) · Alle Rechte vorbehalten</span>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script defer src="/js/deadline.js"></script>
+  <script defer src="/js/conversions.js"></script>
+</body>
+</html>

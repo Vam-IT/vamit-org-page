@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produktpass-Check: Sind Sie vom digitalen Produktpass betroffen? | VAMIT</title>
+  <meta name="description" content="Kostenloser Betroffenheits-Check zum digitalen Produktpass (DPP): Wenige Fragen zu Produktgruppe, Rolle im Markt und Datenlage — für Batterien, Textilien, Stahl, Möbel und weitere. Ergebnis sofort im Browser, ohne Registrierung." />
+  <link rel="canonical" href="https://vam-it.com/produktpass-check.html" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D1421" />
+  <link rel="preload" href="/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="/js/lang.js"></script>
+  <script defer src="/js/consent.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">
+      <img class="logo-mark" src="assets/logo-mark.png" alt="" width="44" height="30" />
+      <span class="logo-word">VAM<span class="accent">IT</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a class="active" href="digitaler-produktpass.html">Digitaler Produktpass</a></li>
+      <li><a href="digitalisierungs-check.html">Digitalisierungs-Check</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a class="nav-lang" href="en/" lang="en" hreflang="en">EN</a></li>
+      <li><a class="nav-cta" href="kontakt.html">Erstgespräch</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+  <!-- HERO -->
+  <div class="hero-wrap">
+    <div class="hero hero--page">
+      <p class="hero-eyebrow">Kostenlos · ohne Registrierung · Ergebnis sofort</p>
+      <h1>Betrifft Sie der <strong>digitale Produktpass?</strong></h1>
+      <p class="hero-sub">
+        Wenige Fragen zu Produktgruppe, Ihrer Rolle im Markt und Ihrer Datenlage — für Batterien,
+        Textilien, Stahl, Möbel, Reifen und weitere. Die Auswertung läuft vollständig in Ihrem
+        Browser: Es wird nichts übertragen und nichts gespeichert, solange Sie uns nicht
+        ausdrücklich schreiben.
+      </p>
+    </div>
+  </div>
+
+  <!-- CHECK -->
+  <div class="section-wrap" style="padding-top:3.5rem;">
+    <div class="section-inner">
+      <form id="checkForm" class="check-form" novalidate>
+
+        <fieldset class="check-step">
+          <legend>Um welche Produktgruppe geht es?</legend>
+          <div class="check-options">
+            <label class="check-option">
+              <input type="radio" name="gruppe" value="batterie" />
+              <span><strong>Batterien</strong><small>Pass ab 18.02.2027 — feststehend</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="gruppe" value="stahl" />
+              <span><strong>Eisen und Stahl</strong><small>Rechtsakt 2026, Pass ca. 2028</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="gruppe" value="textilien" />
+              <span><strong>Textilien, Bekleidung</strong><small>Rechtsakt 2027, Pass ca. 2029</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="gruppe" value="reifen" />
+              <span><strong>Reifen</strong><small>Rechtsakt 2027, Pass ca. 2029</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="gruppe" value="aluminium" />
+              <span><strong>Aluminium</strong><small>Rechtsakt 2027, Pass ca. 2029</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="gruppe" value="moebel" />
+              <span><strong>Möbel</strong><small>Rechtsakt 2028, Pass ca. 2030</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="gruppe" value="matratzen" />
+              <span><strong>Matratzen</strong><small>Rechtsakt 2029, Pass ca. 2031</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="gruppe" value="verpackung" />
+              <span><strong>Verpackungen</strong><small>PPWR — eigener Rechtsrahmen</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="gruppe" value="andere" />
+              <span><strong>Andere Produktgruppe</strong><small>noch nicht im Arbeitsplan</small></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="check-step" id="artBlock" hidden>
+          <legend>Um welche Batterieart geht es?</legend>
+          <div class="check-options">
+            <label class="check-option">
+              <input type="radio" name="art" value="ev" />
+              <span><strong>Traktionsbatterie</strong><small>für Elektrofahrzeuge</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="art" value="lmt" />
+              <span><strong>Leichte Verkehrsmittel</strong><small>E-Bike, E-Scooter, E-Roller</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="art" value="industrie" />
+              <span><strong>Industriebatterie</strong><small>Speicher, USV, Flurförderzeuge</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="art" value="geraet" />
+              <span><strong>Gerätebatterie</strong><small>in Endgeräten verbaut</small></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="check-step" id="kapazitaetBlock" hidden>
+          <legend>Wie groß ist die Kapazität?</legend>
+          <div class="check-options">
+            <label class="check-option">
+              <input type="radio" name="kapazitaet" value="gt2" />
+              <span><strong>Mehr als 2 kWh</strong><small>Schwelle der Batterieverordnung</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="kapazitaet" value="lte2" />
+              <span><strong>2 kWh oder weniger</strong><small>unterhalb der Schwelle</small></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="check-step">
+          <legend>Welche Rolle haben Sie?</legend>
+          <div class="check-options">
+            <label class="check-option">
+              <input type="radio" name="rolle" value="hersteller" />
+              <span><strong>Hersteller</strong><small>wir bringen selbst in Verkehr</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="rolle" value="importeur" />
+              <span><strong>Importeur</strong><small>Einfuhr aus Drittländern</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="rolle" value="bevollmaechtigter" />
+              <span><strong>Bevollmächtigter</strong><small>für einen Hersteller außerhalb der EU</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="rolle" value="zulieferer" />
+              <span><strong>Zulieferer</strong><small>Materialien, Komponenten, Vorprodukte</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="rolle" value="haendler" />
+              <span><strong>Händler</strong><small>Vertrieb ohne eigenes Inverkehrbringen</small></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="check-step">
+          <legend>Liegen Material-, Rezyklat- und CO<sub>2</sub>-Angaben vor?</legend>
+          <div class="check-options">
+            <label class="check-option">
+              <input type="radio" name="daten" value="ja" />
+              <span><strong>Ja, belastbar</strong><small>dokumentiert und belegt</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="daten" value="teilweise" />
+              <span><strong>Teilweise</strong><small>einzelne Werte fehlen noch</small></span>
+            </label>
+            <label class="check-option">
+              <input type="radio" name="daten" value="nein" />
+              <span><strong>Nein</strong><small>müssten bei Zulieferern erhoben werden</small></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button class="btn" type="submit">Ergebnis anzeigen</button>
+        <p class="offer-note" style="margin-top:1rem;">
+          Ihre Antworten verlassen diesen Browser nicht. Es gibt keine Registrierung, keine
+          E-Mail-Abfrage und keine Weitergabe.
+        </p>
+      </form>
+
+      <!-- ERGEBNIS -->
+      <section id="checkResult" class="check-result" hidden aria-live="polite">
+        <p class="section-label">Ihr Ergebnis</p>
+        <div id="checkOutcome"></div>
+
+        <div class="check-next">
+          <h3>Wie es weitergeht</h3>
+          <p>
+            Dieses Ergebnis ist eine erste Einordnung, kein Prüfbericht — und ausdrücklich keine
+            Rechtsberatung. Wenn Sie wissen wollen, was das für Ihre konkreten Produktlinien
+            bedeutet, sprechen wir darüber: 30 Minuten, unverbindlich, und Sie wissen danach,
+            wo Sie stehen.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="kontakt.html">Gespräch vereinbaren</a>
+            <a class="btn-ghost" href="digitaler-produktpass.html">Erst weiterlesen</a>
+          </div>
+          <p class="offer-note" style="margin-top:1.25rem;">
+            Wenn Sie schreiben, hilft uns diese Zeile — Sie können sie einfach mitkopieren:
+          </p>
+          <input id="checkKontext" class="check-context" readonly aria-label="Ergebnis zum Mitkopieren" />
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- HINTERGRUND -->
+  <div class="section-wrap section-wrap--dark">
+    <div class="section-inner">
+      <p class="section-label">Wonach hier geprüft wird</p>
+      <h2 style="color:white;">Die Logik hinter <strong>dem Check.</strong></h2>
+      <div class="prose">
+        <p style="color:var(--muted-dark);">
+          Für <strong style="color:var(--on-dark);">Batterien</strong> bildet der Check Artikel 77
+          der Verordnung (EU) 2023/1542 ab: Traktionsbatterien und Batterien für leichte
+          Verkehrsmittel sind immer passpflichtig, Industriebatterien ab mehr als 2&nbsp;kWh.
+          Für die übrigen Produktgruppen folgt er dem ESPR-Arbeitsplan 2025–2030 — dort stehen
+          die Termine der delegierten Rechtsakte, die konkreten Pflichtfelder aber noch nicht.
+          Deshalb nennt das Ergebnis für diese Gruppen den erwarteten Zeitpunkt und die
+          feststehende Struktur, nicht einzelne Felder.
+        </p>
+        <p style="color:var(--muted-dark);">
+          Wen die Pflicht trifft, entscheidet die Rolle: verantwortlich ist, wer das Produkt in
+          der EU in Verkehr bringt. Zulieferer und Händler tragen sie nicht — bekommen die
+          Anfragen aber trotzdem. Die Frage nach der Datenlage dient der Aufwandsschätzung,
+          nicht der Betroffenheit; sie ist erfahrungsgemäß der Punkt, an dem Projekte Zeit
+          verlieren.
+        </p>
+        <p style="color:var(--muted-dark);">
+          Dieselbe Einstufungslogik arbeitet in der Anwendung, die wir gerade bauen — dort mit
+          dem vollständigen Pflichtenkatalog statt mit fünf Fragen.
+          <a href="digitaler-produktpass.html" style="color:var(--cyan);">Mehr zum Produktpass ↗</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img class="logo-mark" src="assets/logo-mark.png" alt="" width="50" height="34" />
+          <span class="logo-word">VAM<span class="accent">IT</span></span>
+        </div>
+        <p class="footer-tagline">IT-Beratung und Softwareentwicklung aus Bocholt für den Mittelstand in NRW.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="digitaler-produktpass.html">Digitaler Produktpass</a></li>
+          <li><a href="batteriepass.html">Batteriepass</a></li>
+          <li><a href="produktpass-check.html">Produktpass-Check</a></li>
+          <li><a href="digitalisierungs-check.html">Digitalisierungs-Check</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Kontakt</h3>
+        <ul>
+          <li><address><a href="https://www.google.com/maps/search/?api=1&amp;query=Petersfeldstra%C3%9Fe+16%2C+46395+Bocholt" target="_blank" rel="noopener">Petersfeldstraße 16, 46395 Bocholt</a></address></li>
+          <li><a href="mailto:info@vam-it.com">info@vam-it.com</a></li>
+          <li><a href="kontakt.html">Erstgespräch buchen</a></li>
+          <li><a href="https://vamiapp.com" target="_blank" rel="noopener">VAMI App ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VAMIT UG (haftungsbeschränkt) · Alle Rechte vorbehalten</span>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script defer src="/js/produktpass-check.js"></script>
+  <script defer src="/js/conversions.js"></script>
+</body>
+</html>
