@@ -20,10 +20,8 @@
 
   function classifyLink(href) {
     if (!href) return null;
-    if (href.indexOf('cal.eu/vamit') !== -1) return 'booking_click';
     if (href.indexOf('mailto:') === 0) return 'email_click';
     if (href.indexOf('tel:') === 0) return 'phone_click';
-    if (href.indexOf('digitalisierungs-check') !== -1) return 'check_cta_click';
     if (href.indexOf('kontakt.html') !== -1 || href.indexOf('#contact') !== -1) return 'contact_cta_click';
     return null;
   }

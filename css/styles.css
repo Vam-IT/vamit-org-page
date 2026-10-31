@@ -284,43 +284,6 @@ h1 strong { font-weight: 700; }
   color: var(--muted-dark);
 }
 
-/* ── DIVIDER / TICKER ─────────────────────── */
-.divider {
-  overflow: hidden;
-  padding: 1.25rem 0;
-  background: var(--panel);
-  border-top: 1px solid var(--border-dark);
-  border-bottom: 1px solid var(--border-dark);
-}
-
-.divider-track {
-  display: flex;
-  gap: 1.5rem;
-  animation: marquee 20s linear infinite;
-  white-space: nowrap;
-}
-
-.divider-track span {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 0.68rem;
-  letter-spacing: 0.2em;
-  color: var(--on-dark);
-  text-transform: uppercase;
-  flex-shrink: 0;
-}
-
-.divider-track span.dot { color: var(--cyan); }
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .divider-track { animation: none; }
-}
-
 /* ── SECTION BASE ────────────────────────── */
 .section-wrap { padding: 5.5rem 2.5rem; }
 
@@ -436,57 +399,6 @@ h2 strong { font-weight: 700; }
   border-radius: 999px;
 }
 
-/* ── SERVICE DETAIL (Leistungen page) ────── */
-.service-detail {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 3rem;
-  padding: 3rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.service-detail:last-of-type { border-bottom: 1px solid var(--line); }
-
-.service-detail h2 {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.75rem;
-}
-
-.service-detail .service-num { margin-bottom: 0.75rem; }
-
-.service-detail-lead {
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.service-list {
-  list-style: none;
-  display: grid;
-  gap: 0.7rem;
-  font-size: 0.92rem;
-  color: var(--ink);
-}
-
-.service-list li {
-  padding-left: 1.5rem;
-  position: relative;
-  line-height: 1.6;
-}
-
-.service-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--teal);
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 0.8rem;
-}
-
 /* ── PROCESS STEPS ───────────────────────── */
 .steps-grid {
   display: grid;
@@ -558,45 +470,6 @@ h2 strong { font-weight: 700; }
   left: 0;
   color: var(--cyan);
   font-weight: 600;
-}
-
-/* ── OFFER BOX (Digitalisierungs-Check) ──── */
-.offer-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.offer-box {
-  background: var(--ink);
-  color: var(--on-dark);
-  border-radius: 8px;
-  border: 1px solid var(--border-dark);
-  padding: 2.5rem;
-  position: sticky;
-  top: 6rem;
-}
-
-.offer-box .section-label { margin-bottom: 1.5rem; color: var(--cyan); }
-.offer-box .section-label::after { background: var(--border-dark); }
-
-.offer-box h3 {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1.25rem;
-  color: var(--on-dark);
-}
-
-.offer-box .check-list { margin-bottom: 2rem; }
-.offer-box .check-list li { color: var(--on-dark); font-size: 0.9rem; }
-
-.offer-note {
-  font-size: 0.8rem;
-  color: var(--muted-dark);
-  margin-top: 1rem;
-  line-height: 1.6;
 }
 
 /* ── FAQ ─────────────────────────────────── */
@@ -1074,9 +947,6 @@ footer {
 
 /* ── RESPONSIVE ──────────────────────────── */
 @media (max-width: 860px) {
-  .service-detail { grid-template-columns: 1fr; gap: 1.5rem; }
-  .offer-grid { grid-template-columns: 1fr; }
-  .offer-box { position: static; }
   .prose-cols { grid-template-columns: 1fr; gap: 1.5rem; }
   .steps-grid { grid-template-columns: 1fr; }
 }
