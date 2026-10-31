@@ -1,6 +1,6 @@
 // Defaults the site's language to the visitor's browser preference,
 // but only on the German homepage (/) -- the one page that has a real
-// English counterpart (/en/). Deep German pages (kontakt.html etc.)
+// English counterpart (/en/). Deep German pages (impressum.html etc.)
 // have no English translation to redirect to, and /en/ itself is never
 // redirected away from, so a deliberate link to /en/ always works.
 //

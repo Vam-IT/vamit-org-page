@@ -5,7 +5,6 @@ Static multi-page website for VAMIT UG, deployed to GitHub Pages at https://vam-
 ## Pages
 
 - `index.html` – Start (Hero, Leistungen, Arbeitsweise, CTA)
-- `kontakt.html` – E-Mail / Kontaktformular / Adresse
 - `impressum.html`, `datenschutz.html` – Rechtliches
 - `en/index.html` – englische Landing Page (eine Seite)
 

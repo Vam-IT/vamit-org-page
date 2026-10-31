@@ -22,7 +22,7 @@
     if (!href) return null;
     if (href.indexOf('mailto:') === 0) return 'email_click';
     if (href.indexOf('tel:') === 0) return 'phone_click';
-    if (href.indexOf('kontakt.html') !== -1 || href.indexOf('#contact') !== -1) return 'contact_cta_click';
+    if (href.indexOf('#contact') !== -1) return 'contact_cta_click';
     return null;
   }
 
@@ -33,16 +33,6 @@
     if (!eventName) return;
     track(eventName, {
       label: (link.textContent || '').trim().slice(0, 80),
-      source_page: window.location.pathname
-    });
-  }, true);
-
-  document.addEventListener('submit', function (event) {
-    var form = event.target;
-    if (!form || form.id !== 'contactForm') return;
-    var companyField = form.querySelector('[name="company"]');
-    track('contact_form_submit', {
-      has_company: !!(companyField && companyField.value.trim()),
       source_page: window.location.pathname
     });
   }, true);
