@@ -472,6 +472,23 @@ h2 strong { font-weight: 700; }
   font-weight: 600;
 }
 
+/* ── OREFY TEASER ────────────────────────── */
+.orefy-logo { display: block; width: auto; height: 56px; margin-bottom: 2rem; }
+
+.orefy-tag {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--cyan);
+  background: rgba(0,245,255,0.08);
+}
+
+.section-wrap--dark .check-list {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem 3rem;
+  margin-bottom: 2.5rem;
+  color: var(--on-dark);
+}
+
 /* ── FAQ ─────────────────────────────────── */
 .faq-item {
   border-top: 1px solid var(--line);
