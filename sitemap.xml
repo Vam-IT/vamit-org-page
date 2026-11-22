@@ -5,10 +5,12 @@
     <loc>https://vam-it.com/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://vam-it.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://vam-it.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vam-it.com/" />
   </url>
   <url>
     <loc>https://vam-it.com/en/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://vam-it.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://vam-it.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vam-it.com/" />
   </url>
 </urlset>

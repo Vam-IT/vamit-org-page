@@ -11,6 +11,7 @@
   <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <meta name="format-detection" content="telephone=no" />
   <meta name="theme-color" content="#0D1421" />
   <link rel="preload" href="/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
@@ -28,6 +29,8 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#leistungen">Leistungen</a></li>
+      <li><a href="/#orefy">Orefy</a></li>
+      <li><a href="/#ueber-uns">Über uns</a></li>
       <li><a class="nav-lang" href="en/" lang="en" hreflang="en">EN</a></li>
       <li><a class="nav-cta" href="/#contact">Kontakt</a></li>
     </ul>
@@ -59,7 +62,7 @@
         E-Mail-Adresse, IP-Adresse oder auch das Nutzerverhalten.
       </p>
       <p>
-        Hinsichtlich der verwendeten Begriffe, wie z. B. „Verarbeitung", „Verantwortlicher" oder „Betroffener",
+        Hinsichtlich der verwendeten Begriffe, wie z. B. „Verarbeitung“, „Verantwortlicher“ oder „Betroffener“,
         wird auf die Definitionen in Art. 4 DSGVO verwiesen.
       </p>
 
@@ -89,16 +92,15 @@
       <p>
         Wenn Sie als Interessent oder sonstiger Besucher unsere Internetseite aufrufen, erfolgt die Verarbeitung
         Ihrer personenbezogenen Daten im Rahmen der gesetzlichen Vorschriften bzw. dieser Erklärung. Alle Besucher
-        unserer Internetseite werden unter dem Begriff „Nutzer" zusammengefasst.
+        unserer Internetseite werden unter dem Begriff „Nutzer“ zusammengefasst.
       </p>
 
       <h2>V. Welche Daten erheben wir von Ihnen und zu welchen Zwecken bzw. auf welcher Rechtsgrundlage verarbeiten wir diese?</h2>
       <p>
         Unsere Internetseite ist eine reine Informationsseite ohne Registrierung, Login, Kontaktformular oder sonstige Eingabemöglichkeiten.
-        Sämtliche Inhalte (einschließlich Schriftarten und Bilder) werden lokal von unserem Hosting-Anbieter ausgeliefert. Für die Analyse, über welchen
-        Kanal Besucher auf unsere Seite gelangen, setzen wir zusätzlich das cookielose Analyse-Tool PostHog ein (Näheres dazu unten sowie in Abschnitt VI).
-        Unsere Internetseite enthält außerdem Verweise (Links) auf externe Angebote, insbesondere auf den
-        Apple App Store, auf den in Abschnitt VI gesondert eingegangen wird.
+        Sämtliche Inhalte (einschließlich Schriftarten und Bilder) werden lokal von unserem Hosting-Anbieter ausgeliefert. Mit Ihrer Einwilligung
+        setzen wir zusätzlich das cookielose Analyse-Tool PostHog ein, um Besuche und Klicks auf Kontakt-Links auszuwerten (Näheres dazu unten
+        sowie in Abschnitt VI).
       </p>
       <p>
         <strong>Beim Besuch unserer Internetseite</strong> werden nur die personenbezogenen Daten verarbeitet, die Ihr Browser automatisch an den Server übermittelt.
@@ -119,26 +121,30 @@
         Die Verarbeitung dieser Daten in sog. Logfiles ist erforderlich, um unsere Internetseite anzuzeigen und die Stabilität und Sicherheit zu gewährleisten.
       </p>
       <p>
-        <strong>Reichweiten- und Kampagnenanalyse (PostHog):</strong> Um zu erkennen, über welchen Kanal Besucher auf unsere Internetseite gelangen
-        (z. B. über einen QR-Code auf unserem Flyer oder über unsere Profile in sozialen Netzwerken), setzen wir das Analyse-Tool PostHog ein
-        (Anbieter: PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA; betrieben über die europäische Cloud-Instanz von PostHog
-        mit Serverstandort Frankfurt am Main). PostHog wird dabei erst aktiv, nachdem Sie dem im Banner am unteren Bildschirmrand aktiv zugestimmt
-        haben (siehe Abschnitt XVI); ohne Ihre Zustimmung findet keine Verarbeitung durch PostHog statt. Nach Ihrer Zustimmung werden folgende
-        Daten verarbeitet:
+        <strong>Reichweiten-, Kampagnen- und Klickanalyse (PostHog):</strong> Um zu erkennen, über welchen Kanal Besucher auf unsere Internetseite
+        gelangen (z. B. über einen QR-Code auf unserem Flyer oder über Links in sozialen Netzwerken) und ob sie Kontakt zu uns aufnehmen möchten,
+        setzen wir das Analyse-Tool PostHog ein (Anbieter: PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA; betrieben über die
+        europäische Cloud-Instanz von PostHog mit Serverstandort Frankfurt am Main). PostHog wird dabei erst aktiv, nachdem Sie dem im Banner am
+        unteren Bildschirmrand aktiv zugestimmt haben (siehe Abschnitt XVI); ohne Ihre Zustimmung findet keine Verarbeitung durch PostHog statt.
+        Nach Ihrer Zustimmung werden folgende Daten verarbeitet:
       </p>
       <ul>
-        <li>IP-Adresse des anfragenden Geräts</li>
-        <li>aufgerufene Seiten-URL, ggf. inkl. Kampagnenkennzeichnung (UTM-Parameter, z. B. „utm_source=tiktok")</li>
-        <li>Zeitpunkt des Aufrufs</li>
-        <li>grober technischer Kontext (Browsertyp, Betriebssystem)</li>
+        <li>Seitenaufrufe und das Verlassen einer Seite: Adresse und Titel der Seite, Zeitpunkt, ggf. Verweildauer und Scrolltiefe</li>
+        <li>Klicks auf Kontakt-Links (Kontakt-Schaltflächen, E-Mail, Telefon): Art und Beschriftung des Links sowie die Seite, auf der geklickt wurde</li>
+        <li>Herkunft des Besuchs: zuvor besuchte Seite (Referrer) und Kampagnenkennzeichnung (UTM-Parameter, z. B. „utm_source=flyer“); beim Flyer-QR-Code auch dessen Aufruf</li>
+        <li>technischer Kontext: Browser mit Version und vollständiger Browserkennung (User-Agent), Betriebssystem, Gerätetyp, Bildschirm- und Fenstergröße, Sprache und Zeitzone</li>
+        <li>zufällig erzeugte Kennungen, die nur bis zum Verlassen der jeweiligen Seite gelten</li>
+        <li>IP-Adresse: Sie wird zur Übertragung und ggf. zur Ableitung eines ungefähren Standorts (z. B. Land, Stadt) verarbeitet, aber nicht mit den Analysedaten gespeichert</li>
       </ul>
       <p>
-        PostHog ist bei uns bewusst datensparsam konfiguriert: Es werden keine Cookies gesetzt und keine Daten im Browser gespeichert
-        (weder Cookies noch Local- oder Session-Storage). Es findet keine dauerhafte Wiedererkennung einzelner Besucher über mehrere Seitenaufrufe
-        oder Besuche hinweg statt, und es werden weder Klicks und Eingaben noch Bildschirminhalte aufgezeichnet (kein Session-Recording).
+        PostHog ist bei uns bewusst datensparsam konfiguriert: Es werden keine Cookies gesetzt und keine Analysedaten oder Kennungen dauerhaft
+        in Ihrem Browser gespeichert. Beim Start prüft PostHog lediglich mit kurzen Testeinträgen, die sofort wieder gelöscht werden, ob der
+        Browserspeicher verfügbar ist. Es findet keine Wiedererkennung einzelner Besucher über mehrere Seitenaufrufe oder Besuche hinweg statt.
+        Andere als die genannten Klicks, Eingaben, Mausbewegungen und Bildschirminhalte werden nicht aufgezeichnet (keine automatische
+        Klickerfassung, keine Heatmaps, kein Session-Recording).
       </p>
       <p>
-        <strong>Wenn Sie uns per E-Mail kontaktieren</strong> (z. B. an die auf der Seite angezeigte Adresse info@vam-it.com), verarbeiten wir die von Ihnen freiwillig mitgeteilten Daten, z. B.:
+        <strong>Wenn Sie uns per E-Mail kontaktieren</strong> (z. B. an die auf der Seite angezeigten Adressen info@vam-it.com oder info@orefy.cloud), verarbeiten wir die von Ihnen freiwillig mitgeteilten Daten, z. B.:
       </p>
       <ul>
         <li>Ihre E-Mail-Adresse</li>
@@ -156,19 +162,20 @@
         <li>Bereitstellung der Funktionen und Inhalte unseres Onlineangebots</li>
         <li>Gewährleistung eines reibungslosen Verbindungsaufbaus zu unserer Internetseite</li>
         <li>Auswertung und Gewährleistung der Systemsicherheit und -stabilität</li>
-        <li>Beantwortung etwaiger Kontaktanfragen per E-Mail</li>
+        <li>Beantwortung etwaiger Kontaktanfragen per E-Mail oder Telefon</li>
         <li>Darstellung der Internetseite mit einheitlichem Schriftbild (lokal eingebundene Schriftarten, keine Übermittlung an Dritte)</li>
-        <li>Analyse, über welchen Kanal (z. B. Social-Media-Profile, QR-Codes) Besucher auf unsere Seite gelangen, zur Erfolgsmessung von Marketingmaßnahmen</li>
+        <li>Analyse, über welchen Kanal (z. B. Links, QR-Codes) Besucher auf unsere Seite gelangen und ob sie Kontakt-Links anklicken, zur Erfolgsmessung von Marketingmaßnahmen</li>
       </ul>
       <p>
         <strong>Rechtsgrundlage:</strong> Soweit keine speziellere Rechtsgrundlage angegeben ist, beruht die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO (Wahrung berechtigter Interessen).
         Unser berechtigtes Interesse folgt dabei aus den oben genannten Zwecken. Bei Anfragen, die auf den Abschluss oder die Durchführung eines Vertrages gerichtet sind,
         kann zusätzlich Art. 6 Abs. 1 lit. b DSGVO einschlägig sein. Die Verarbeitung durch PostHog beruht auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO),
-        die Sie über das Banner erteilen und jederzeit mit Wirkung für die Zukunft widerrufen können (siehe Abschnitt XVI).
+        die Sie über das Banner erteilen und jederzeit mit Wirkung für die Zukunft widerrufen können (siehe Abschnitt XVI). Soweit PostHog dabei
+        auf Ihr Endgerät zugreift, beruht dies auf § 25 Abs. 1 TDDDG.
       </p>
       <p>
-        Eine Offenlegung Ihrer Daten gegenüber Dritten erfolgt nur gegenüber unserem Hosting-Anbieter sowie dem in Abschnitt VI genannten
-        Analyse-Dienstleister PostHog im Rahmen der beschriebenen Datenverarbeitung. Eine darüber hinausgehende Weitergabe an Dritte findet nicht statt.
+        Eine Offenlegung Ihrer Daten erfolgt nur gegenüber den in Abschnitt VI genannten Dienstleistern im Rahmen der beschriebenen
+        Datenverarbeitung sowie, soweit wir gesetzlich dazu verpflichtet sind.
       </p>
 
       <h2>VI. An wen übermitteln wir Ihre Daten?</h2>
@@ -176,16 +183,21 @@
         Wir arbeiten mit folgenden Dienstleistern zusammen:
       </p>
       <p>
-        <strong>Web-Hoster:</strong> GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (Tochterunternehmen der Microsoft Corporation), Dienst „GitHub Pages"
+        <strong>Web-Hoster:</strong> GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (Tochterunternehmen der Microsoft Corporation), Dienst „GitHub Pages“
       </p>
       <p>
         Beim Aufruf unserer Internetseite verarbeitet GitHub als Hosting-Anbieter automatisch die in Abschnitt V genannten technischen Zugriffsdaten (Server-Logfiles).
         Auf diese Logdaten haben wir als Betreiber der Inhalte keinen Zugriff und keine Möglichkeit zur Einsichtnahme oder Löschung einzelner Einträge.
       </p>
       <p>
+        <strong>E-Mail-Anbieter:</strong> STRATO GmbH, Otto-Ostrowski-Straße 7, 10249 Berlin. Wenn Sie uns eine E-Mail schreiben, wird diese
+        über die Server von STRATO empfangen und gespeichert. Weitere Informationen:
+        <a href="https://www.strato.de/datenschutz/" target="_blank" rel="noopener">https://www.strato.de/datenschutz/</a>
+      </p>
+      <p>
         <strong>Analyse-Tool:</strong> PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA, betrieben über die europäische
         Cloud-Instanz von PostHog (Serverstandort Frankfurt am Main, Deutschland). PostHog wird auf allen Seiten unseres Internetauftritts eingesetzt,
-        um zu analysieren, über welchen Kanal Besucher zu uns gelangen (siehe Abschnitt V) – jedoch erst, nachdem Sie im Consent-Banner zugestimmt
+        um Besuche und Klicks auf Kontakt-Links zu analysieren (siehe Abschnitt V) – jedoch erst, nachdem Sie im Consent-Banner zugestimmt
         haben (siehe Abschnitt XVI). Es werden dabei keine Cookies gesetzt.
         Weitere Informationen finden Sie in der Datenschutzerklärung von PostHog:
         <a href="https://posthog.com/privacy" target="_blank" rel="noopener">https://posthog.com/privacy</a>
@@ -197,15 +209,20 @@
         gilt die Datenschutzerklärung des jeweiligen Anbieters.
       </p>
       <p>
-        <strong>Apple App Store:</strong> Unsere Seite verlinkt auf den Eintrag unserer App im Apple App Store. Das Badge-Bild wird lokal
-        von unserer Seite ausgeliefert; Daten werden erst an Apple übermittelt, wenn Sie dem Link in den App Store folgen.
-        Weitere Informationen finden Sie in der Datenschutzerklärung von Apple:
-        <a href="https://www.apple.com/legal/privacy/de-ww/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/de-ww/</a>
+        <strong>Orefy:</strong> Wir verlinken auf orefy.cloud, die ebenfalls von der VAMIT UG (haftungsbeschränkt) betriebene Seite zu unserem
+        Produkt Orefy. Daten werden dorthin erst übermittelt, wenn Sie dem Link folgen; dann gilt die dortige Datenschutzerklärung:
+        <a href="https://orefy.cloud/privacy.html" target="_blank" rel="noopener">https://orefy.cloud/privacy.html</a>
+      </p>
+      <p>
+        <strong>Google Maps:</strong> Unsere Anschrift ist teilweise mit Google Maps verlinkt (Anbieter: Google Ireland Limited, Gordon House,
+        Barrow Street, Dublin 4, Irland). Es ist keine Karte eingebunden; Daten werden erst an Google übermittelt, wenn Sie dem Link folgen.
+        Weitere Informationen:
+        <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener">https://policies.google.com/privacy?hl=de</a>
       </p>
 
       <h2>VII. Werden Ihre Daten an Stellen außerhalb der EU übermittelt?</h2>
       <p>
-        Ja, im Rahmen der Nutzung der in Abschnitt VI genannten Dienste werden Daten in die USA übermittelt:
+        Ja, bei einzelnen der in Abschnitt VI genannten Dienste werden Daten in die USA übermittelt oder können von dort aus zugänglich sein:
       </p>
       <p>
         <strong>GitHub Pages:</strong> GitHub, Inc. ist als Tochterunternehmen der Microsoft Corporation eigenständig unter dem
@@ -228,12 +245,18 @@
       <h2>VIII. Wie lange verarbeiten wir Ihre Daten?</h2>
       <p>
         Die Server-Logfiles unseres Hosting-Anbieters werden ausschließlich zu den in Abschnitt V genannten Zwecken kurzfristig verarbeitet;
-        die genaue Speicherdauer richtet sich nach den Vorgaben von GitHub als Auftragsverarbeiter.
+        die genaue Speicherdauer richtet sich nach den Vorgaben von GitHub.
       </p>
       <p>
-        Daten aus einer E-Mail-Kontaktaufnahme löschen wir, sobald die Bearbeitung Ihrer Anfrage abgeschlossen ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
-        In Deutschland existieren spezielle Aufbewahrungsfristen u. a. gemäß Handelsrecht (§ 257 Abs. 4 HGB) und Steuerrecht (10 Jahre für steuerrechtlich relevante Unterlagen);
-        diese kommen jedoch nur zur Anwendung, soweit aus der Kontaktaufnahme tatsächlich aufbewahrungspflichtige Unterlagen entstehen.
+        Daten aus einer Kontaktaufnahme per E-Mail oder Telefon löschen wir, sobald die Bearbeitung Ihrer Anfrage abgeschlossen ist und keine
+        gesetzlichen Aufbewahrungspflichten entgegenstehen. Nach Handels- und Steuerrecht (§ 257 HGB, § 147 AO) betragen diese je nach Art der
+        Unterlage in der Regel 6, 8 oder 10 Jahre; sie kommen nur zur Anwendung, soweit aus der Kontaktaufnahme tatsächlich
+        aufbewahrungspflichtige Unterlagen entstehen.
+      </p>
+      <p>
+        Analysedaten bewahren wir in PostHog nur so lange auf, wie sie für die Erfolgsmessung benötigt werden, längstens für die in unserem
+        PostHog-Tarif vorgesehene Speicherdauer. Ihre Entscheidung im Consent-Banner bleibt in Ihrem Browser gespeichert, bis Sie den
+        Browserspeicher löschen.
       </p>
 
       <h2>IX. Was sind Ihre Rechte?</h2>
@@ -250,7 +273,7 @@
       <p>
         Eine automatisierte Entscheidung einschließlich Profiling (Art. 22 DSGVO) findet nicht statt. Soweit wir eine Einwilligung
         einholen (siehe Abschnitt XVI, PostHog-Banner), können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO) –
-        über den Link „Datenschutz-Einstellungen", der auf jeder Seite eingeblendet wird.
+        über den Link „Datenschutz-Einstellungen“, der auf jeder Seite eingeblendet wird.
       </p>
 
       <h2>X. Wann und wie können Sie der Datenverarbeitung widersprechen?</h2>
@@ -297,8 +320,9 @@
 
       <h2>XIV. Wie können Sie mit uns Kontakt aufnehmen?</h2>
       <p>
-        Sie können mit uns per E-Mail Kontakt aufnehmen (s. o.). Sofern Sie uns per E-Mail kontaktieren, speichern wir die von Ihnen freiwillig übermittelten personenbezogenen Daten
-        zu Zwecken der Bearbeitung Ihrer Anfrage. Es erfolgt keine Weitergabe dieser Daten an Dritte.
+        Sie können mit uns per E-Mail oder Telefon Kontakt aufnehmen (s. o.). Die dabei von Ihnen freiwillig übermittelten personenbezogenen Daten
+        (bei Anrufen insbesondere Ihre Rufnummer und der Gesprächsanlass) verarbeiten wir zur Bearbeitung Ihrer Anfrage. An Dritte geben wir
+        diese Daten nur im in den Abschnitten V und VI beschriebenen Umfang weiter.
       </p>
 
       <h2>XV. Wie sichern wir unsere Internetseite ab?</h2>
@@ -308,21 +332,22 @@
       </p>
       <p>
         Unsere Internetseite wird über GitHub Pages ausschließlich verschlüsselt mittels SSL-/TLS-Zertifikat übertragen. Dies erkennen Sie daran,
-        dass in der Adresszeile Ihres Browsers „https" (anstelle von „http") sowie ein Schloss-Symbol erscheint.
+        dass in der Adresszeile Ihres Browsers „https“ (anstelle von „http“) sowie ein Schloss-Symbol erscheint.
       </p>
 
       <h2>XVI. Setzen wir Cookies ein?</h2>
       <p>
-        Unsere Internetseite selbst setzt keine eigenen Cookies und keine Cookies von Drittanbietern ein. Für die in Abschnitt V beschriebene
-        Kanal- und Kampagnenanalyse verwenden wir das Analyse-Tool PostHog – bewusst so konfiguriert, dass dabei ebenfalls keine Cookies gesetzt
-        und keine Daten im Browser gespeichert werden. Es findet daher kein cookiebasiertes Tracking und kein Online-Marketing über Cookies statt.
+        Unsere Internetseite setzt keine eigenen Cookies und keine Cookies von Drittanbietern ein. Auch das in Abschnitt V beschriebene
+        Analyse-Tool PostHog ist so konfiguriert, dass es keine Cookies setzt und keine Analysedaten im Browser ablegt. Es findet daher kein
+        cookiebasiertes Tracking und kein Online-Marketing über Cookies statt. Im Local Storage speichern wir ausschließlich Ihre Entscheidung
+        aus dem Consent-Banner. Die gewählte Sprache wird nicht gespeichert.
       </p>
       <p>
         <strong>Consent-Banner:</strong> Beim ersten Besuch unserer Internetseite zeigen wir Ihnen ein Banner am unteren Bildschirmrand mit den
-        gleichwertigen Optionen „Akzeptieren" und „Ablehnen". PostHog wird erst aktiv, wenn Sie aktiv auf „Akzeptieren" klicken; bei „Ablehnen"
+        gleichwertigen Optionen „Akzeptieren“ und „Ablehnen“. PostHog wird erst aktiv, wenn Sie aktiv auf „Akzeptieren“ klicken; bei „Ablehnen“
         oder solange Sie keine Auswahl treffen, findet keinerlei Analyse statt. Ihre Entscheidung speichern wir technisch bedingt in Ihrem Browser
         (Local Storage), damit Ihnen das Banner nicht bei jedem erneuten Besuch angezeigt wird; diese Speicherung selbst ist technisch notwendig
-        und erfordert keine gesonderte Einwilligung. Über den Link „Datenschutz-Einstellungen", der dauerhaft am unteren Bildschirmrand jeder
+        und erfordert keine gesonderte Einwilligung (§ 25 Abs. 2 Nr. 2 TDDDG). Über den Link „Datenschutz-Einstellungen“, der dauerhaft im Fußbereich jeder
         Seite eingeblendet wird, können Sie Ihre Entscheidung jederzeit einsehen und ändern bzw. Ihre Einwilligung mit Wirkung für die Zukunft
         widerrufen (Art. 7 Abs. 3 DSGVO).
       </p>
@@ -335,11 +360,11 @@
 
       <h2>XVIII. Aktualität und Änderung dieser Datenschutzerklärung</h2>
       <p>
-        Diese Datenschutzerklärung hat den Stand August 2026. Durch die Weiterentwicklung unserer Internetseite (z. B. Einbindung eines Kontaktformulars,
+        Diese Datenschutzerklärung hat den Stand November 2026. Durch die Weiterentwicklung unserer Internetseite (z. B. Einbindung eines Kontaktformulars,
         von Analyse-Tools oder Social-Media-Profilen) oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden,
         diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Fassung kann jederzeit auf dieser Internetseite abgerufen werden.
       </p>
-      <p><em>Stand: August 2026</em></p>
+      <p><em>Stand: November 2026</em></p>
     </div>
   </div>
 
@@ -353,12 +378,14 @@
           <img class="logo-mark" src="assets/logo-mark.png" alt="" width="50" height="34" />
           <span class="logo-word">VAM<span class="accent">IT</span></span>
         </div>
-        <p class="footer-tagline">Cloud-Infrastruktur und KI für Unternehmen.</p>
+        <p class="footer-tagline">Cloud-Infrastruktur auf AWS für Unternehmen.</p>
       </div>
       <div class="footer-col">
         <h3>Navigation</h3>
         <ul>
           <li><a href="/#leistungen">Leistungen</a></li>
+          <li><a href="/#orefy">Orefy</a></li>
+          <li><a href="/#ueber-uns">Über uns</a></li>
           <li><a href="/#contact">Kontakt</a></li>
         </ul>
       </div>

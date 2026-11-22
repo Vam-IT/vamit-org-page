@@ -8,6 +8,17 @@
   <link rel="canonical" href="https://vam-it.com/" />
   <link rel="alternate" hreflang="de" href="https://vam-it.com/" />
   <link rel="alternate" hreflang="en" href="https://vam-it.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://vam-it.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="VAMIT" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:url" content="https://vam-it.com/" />
+  <meta property="og:title" content="VAMIT – Cloud-Infrastruktur auf AWS" />
+  <meta property="og:description" content="VAMIT UG: Cloud-Infrastruktur auf AWS für Unternehmen." />
+  <meta property="og:image" content="https://vam-it.com/assets/og-de.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -15,6 +26,8 @@
   <meta name="theme-color" content="#0D1421" />
   <link rel="preload" href="/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+  <!-- Inline on purpose: has to run before the first paint, otherwise the English hint shifts the layout -->
+  <script>if (!/^de\b/i.test(navigator.language || 'de')) document.documentElement.classList.add('foreign-lang');</script>
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="/js/lang.js"></script>
   <script defer src="/js/consent.js"></script>
@@ -49,6 +62,8 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#orefy">Orefy</a></li>
+      <li><a href="#ueber-uns">Über uns</a></li>
       <li><a class="nav-lang" href="en/" lang="en" hreflang="en">EN</a></li>
       <li><a class="nav-cta" href="#contact">Kontakt</a></li>
     </ul>
@@ -61,21 +76,30 @@
 
   <!-- HERO -->
   <div class="hero-wrap">
-    <canvas id="hero-shader-canvas" class="hero-canvas" aria-hidden="true"></canvas>
-    <div class="hero">
-      <p class="hero-eyebrow">Cloud &amp; KI für Unternehmen</p>
+    <div class="hero hero--scene">
+      <a class="lang-hint" id="langHint" href="en/" lang="en" hreflang="en">View this page in English <span aria-hidden="true">&rarr;</span></a>
+      <p class="hero-eyebrow">Cloud-Infrastruktur auf AWS</p>
       <h1><strong><span class="accent">Cloud</span> und Infrastruktur, die einfach läuft.</strong></h1>
       <p class="hero-sub hero-sub-full">
-        Wir bauen und betreiben Ihre Cloud-Infrastruktur auf AWS und bringen KI dorthin,
-        wo sie Ihnen wirklich hilft. Umgesetzt von Experten.
+        Wir bauen und betreiben Ihre Cloud-Infrastruktur auf AWS: sicher, automatisiert
+        und wartbar. Umgesetzt von Experten.
       </p>
       <p class="hero-sub hero-sub-short">
-        Cloud-Infrastruktur auf AWS und KI, die Ihnen wirklich hilft &ndash; von vier
-        Gründern, die selbst umsetzen.
+        Wir bauen und betreiben Ihre Cloud auf AWS: sicher, automatisiert und wartbar.
+        Umgesetzt von Experten.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn">Kontakt aufnehmen</a>
         <a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a>
+      </div>
+      <div class="hero-scene" id="heroScene">
+        <canvas data-logo="assets/logo-mark.png" aria-hidden="true"></canvas>
+        <button type="button" class="scene-toggle" aria-label="Animation anhalten" data-pause="Animation anhalten" data-play="Animation abspielen" hidden>
+          <svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false">
+            <path class="icon-pause" d="M2 1h3v10H2zM7 1h3v10H7z" />
+            <path class="icon-play" d="M2.5 1l8 5-8 5z" />
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -84,17 +108,21 @@
   <div class="section-wrap" id="leistungen">
     <div class="section-inner">
       <p class="section-label">Was wir tun</p>
-      <h2>Wofür wir stehen. <strong>Cloud &amp; Infrastruktur auf AWS.</strong></h2>
-      <p class="section-intro">
-        Wir konzentrieren uns auf das, was wir wirklich können: schlanke, wartbare
-        Lösungen, die im Alltag funktionieren und mit Ihren Anforderungen mitwachsen.
-      </p>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Cloud &amp; Infrastruktur</h3>
-          <p>Eine sichere, automatisierte Plattform auf AWS: Cloud-Migration, containerisierte Anwendungen, Infrastructure as Code, CI/CD, Monitoring und Security.</p>
-          <div class="service-tags">
-            <span class="tag">AWS</span><span class="tag">Container</span><span class="tag">IaC</span><span class="tag">CI/CD</span>
+      <div class="split">
+        <div>
+          <h2>Wofür wir stehen. <strong>Cloud &amp; Infrastruktur auf AWS.</strong></h2>
+          <p class="section-intro">
+            Wir konzentrieren uns auf das, was wir wirklich können: schlanke, wartbare
+            Lösungen, die im Alltag funktionieren und mit Ihren Anforderungen mitwachsen.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Cloud &amp; Infrastruktur</h3>
+            <p>Eine sichere, automatisierte Plattform auf AWS: Cloud-Migration, containerisierte Anwendungen, Infrastructure as Code, CI/CD, Monitoring und Security.</p>
+            <div class="service-tags">
+              <span class="tag">AWS</span><span class="tag">Container</span><span class="tag">IaC</span><span class="tag">CI/CD</span>
+            </div>
           </div>
         </div>
       </div>
@@ -105,21 +133,91 @@
   <div class="section-wrap section-wrap--dark" id="orefy">
     <div class="section-inner">
       <p class="section-label">Neu von VAMIT</p>
-      <img class="orefy-logo" src="assets/orefy-logo-dark.svg" alt="Orefy" width="189" height="56" />
-      <span class="tag orefy-tag">Verfügbar ab Q1 2027</span>
-      <h2>Behalten Sie <strong>Ihre Cloud im Griff.</strong></h2>
-      <p class="section-intro">
-        Von ClickOps zu bewährter, modularer Infrastruktur als Code.
-      </p>
-      <ul class="check-list">
+      <div class="split">
+        <div>
+          <img class="orefy-logo" src="assets/orefy-logo-dark.svg" alt="Orefy" width="189" height="56" />
+          <span class="tag orefy-tag">Verfügbar ab Q1 2027</span>
+          <h2>Behalten Sie <strong>Ihre Cloud im Griff.</strong></h2>
+          <p class="section-intro">
+            Von ClickOps zu bewährter, modularer Infrastruktur als Code, mit Terraform oder OpenTofu.
+          </p>
+          <div class="hero-actions orefy-actions">
+            <a href="mailto:info@orefy.cloud?subject=Orefy%20Early%20Access" class="btn btn-orefy">Early Access anfragen</a>
+            <a href="https://orefy.cloud/" target="_blank" rel="noopener" class="btn btn-ghost">orefy.cloud ansehen <svg class="icon-ext" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M3 9l6-6M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+          <p class="orefy-mail">Oder direkt an <a href="mailto:info@orefy.cloud?subject=Orefy%20Early%20Access">info@orefy.cloud</a></p>
+        </div>
+
+        <!-- Product preview in HTML, so it stays sharp and readable on phones. Modeled on the demo on orefy.cloud. -->
+        <figure class="product-shot">
+          <div class="product-window" role="img" aria-label="Beispielansicht von Orefy: Manuell angelegte Cloud-Ressourcen werden zu Infrastructure as Code, der Plan meldet keine Änderungen.">
+            <div class="product-bar"><i></i><i></i><i></i><span>orefy · prod-eu</span></div>
+            <div class="product-panes">
+              <div class="product-pane">
+                <p class="product-head">Bestehende Umgebung</p>
+                <ul class="product-resources">
+                <li>vpc-0a3f91c2</li>
+                <li>subnet-private-a</li>
+                <li>prod-orders-db</li>
+                <li>alb-checkout</li>
+                <li>ecs-cluster-core</li>
+                <li>s3-media-uploads</li>
+                </ul>
+              </div>
+              <div class="product-pane">
+                <p class="product-head product-head--refined">Infrastructure as Code</p>
+<pre class="product-code"><b>module</b> "network" {
+  source = <em>"./modules/network"</em>
+  cidr   = <em>"10.20.0.0/16"</em>
+  azs    = local.azs
+}
+
+<small># plan: 0 to add, 0 to change</small></pre>
+              </div>
+            </div>
+            <div class="product-status"><span class="product-progress"></span>Geprüft · keine Abweichung</div>
+          </div>
+          <figcaption>Beispielansicht mit Demodaten</figcaption>
+        </figure>
+      </div>
+
+      <ul class="check-list orefy-features">
         <li>Erkennen, was in Ihrer Umgebung läuft</li>
         <li>In sauberen, modularen Infrastructure-as-Code überführen</li>
         <li>Prüfen, dass sich auf dem Weg nichts verändert hat</li>
         <li>Sicherheits- und Compliance-Lücken aufspüren</li>
         <li>Den nächsten Schritt vorbereiten, auch zu EU-souveränen Clouds</li>
       </ul>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-ghost">Mehr erfahren</a>
+    </div>
+  </div>
+
+  <!-- ABOUT: only facts that are also in impressum.html, keep both in sync -->
+  <div class="section-wrap" id="ueber-uns">
+    <div class="section-inner">
+      <p class="section-label">Über uns</p>
+      <div class="split">
+        <div>
+          <h2>Aus Bocholt. <strong>Persönlich ansprechbar.</strong></h2>
+          <p class="section-intro">
+            VAMIT hat seinen Sitz in Bocholt im Westmünsterland. Ihr erster Ansprechpartner
+            für Projekte und Zusammenarbeit ist Geschäftsführer Veselin&nbsp;Kolev.
+          </p>
+        </div>
+        <div class="founder-card">
+          <div class="founder-head">
+            <div class="founder-avatar" aria-hidden="true">VK</div>
+            <div>
+              <h3>Veselin Kolev</h3>
+              <p class="founder-role">Geschäftsführer</p>
+            </div>
+          </div>
+          <dl class="company-facts">
+            <div><dt>Unternehmen</dt><dd>VAMIT UG (haftungsbeschränkt)</dd></div>
+            <div><dt>Sitz</dt><dd>Petersfeldstraße&nbsp;16<br />46395&nbsp;Bocholt</dd></div>
+            <div><dt>Handelsregister</dt><dd>Amtsgericht Coesfeld, HRB&nbsp;23796</dd></div>
+            <div><dt>USt-ID</dt><dd>DE462795245</dd></div>
+          </dl>
+        </div>
       </div>
     </div>
   </div>
@@ -134,7 +232,7 @@
       <div class="hero-actions">
         <a href="mailto:info@vam-it.com" class="btn">E-Mail schreiben</a>
       </div>
-      <p class="cta-meta">info@vam-it.com</p>
+      <p class="cta-meta"><a href="mailto:info@vam-it.com">info@vam-it.com</a></p>
     </div>
   </div>
 
@@ -148,13 +246,14 @@
           <img class="logo-mark" src="assets/logo-mark.png" alt="" width="50" height="34" />
           <span class="logo-word">VAM<span class="accent">IT</span></span>
         </div>
-        <p class="footer-tagline">Cloud-Infrastruktur und KI für Unternehmen.</p>
+        <p class="footer-tagline">Cloud-Infrastruktur auf AWS für Unternehmen.</p>
       </div>
       <div class="footer-col">
         <h3>Navigation</h3>
         <ul>
           <li><a href="#leistungen">Leistungen</a></li>
           <li><a href="#orefy">Orefy</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
       </div>
@@ -173,7 +272,7 @@
   </footer>
 
   <script src="js/nav.js"></script>
-  <script src="js/hero-shader.js"></script>
+  <script defer src="js/hero-scene.js"></script>
   <script defer src="/js/conversions.js"></script>
 </body>
 </html>

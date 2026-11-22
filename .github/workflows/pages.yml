@@ -36,7 +36,7 @@ jobs:
           cp -r css fonts assets js en go dist/
 
       - name: Minify CSS
-        run: npx --yes clean-css-cli css/styles.css -o dist/css/styles.css
+        run: npx --yes clean-css-cli@5.6.3 css/styles.css -o dist/css/styles.css
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
