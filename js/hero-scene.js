@@ -4,12 +4,10 @@
 // Plain Canvas 2D with a small orthographic 3D projection, no library.
 // - animates only while visible, at 30 fps on touch devices
 // - static final frame with prefers-reduced-motion
-// - pause button, required for motion longer than 5 s (WCAG 2.2.2)
 (function () {
   const root = document.getElementById('heroScene');
   if (!root) return;
   const canvas = root.querySelector('canvas');
-  const toggle = root.querySelector('button');
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
@@ -79,6 +77,7 @@
   let height = 0;
   let dpr = 1;
   let scale = 1;
+  let stroke = 1; // line width, grows on very large screens
   let originX = 0;
   let originY = 0;
   let cos = 1;
@@ -315,7 +314,7 @@
       ctx.save();
       ctx.translate(x + i * depthX * scale, y + i * 0.022 * scale);
       ctx.scale(scale, scale);
-      ctx.lineWidth = 1.4 / scale;
+      ctx.lineWidth = 1.4 * stroke / scale;
       if (i) {
         ctx.fillStyle = rgba(mix(INK, CYAN, 0.08 + (10 - i) * 0.012));
         ctx.fill(cloud);
@@ -345,7 +344,7 @@
     const yaw = Math.PI / 4 + Math.sin(time * 0.17) * 0.13 + pointer * 0.2;
     cos = Math.cos(yaw);
     sin = Math.sin(yaw);
-    ctx.lineWidth = 1;
+    ctx.lineWidth = stroke;
     ctx.lineJoin = 'round';
 
     const order = smooth(clamp((time - 3.4) / (SETTLED - 3.4)));
@@ -366,7 +365,8 @@
   function resize() {
     const w = canvas.clientWidth;
     const h = canvas.clientHeight;
-    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    // at most ~4 megapixels, the scene gets large on 4K screens
+    const ratio = Math.min(window.devicePixelRatio || 1, 2, Math.sqrt(4e6 / Math.max(1, w * h)));
     if (w === width && h === height && ratio === dpr) return;
     width = w;
     height = h;
@@ -374,6 +374,7 @@
     canvas.width = Math.round(w * dpr);
     canvas.height = Math.round(h * dpr);
     scale = Math.min(w / 10, h / 8.9);
+    stroke = Math.max(1, scale / 70);
     originX = w / 2;
     originY = h / 2 + 1.38 * scale; // cloud and platform centered together
     draw(); // resizing clears the canvas
@@ -385,7 +386,6 @@
   let frame = 0;
   let last = null;
   let inView = !('IntersectionObserver' in window);
-  let paused = false;
 
   function tick(now) {
     frame = requestAnimationFrame(tick);
@@ -402,22 +402,14 @@
   function update() {
     cancelAnimationFrame(frame);
     last = null;
-    toggle.hidden = motion.matches;
     if (motion.matches) {
       time = Math.max(time, SETTLED + 1);
       pointer = 0;
       draw();
       return;
     }
-    if (inView && !paused && !document.hidden) frame = requestAnimationFrame(tick);
+    if (inView && !document.hidden) frame = requestAnimationFrame(tick);
   }
-
-  toggle.addEventListener('click', () => {
-    paused = !paused;
-    root.classList.toggle('is-paused', paused);
-    toggle.setAttribute('aria-label', paused ? toggle.dataset.play : toggle.dataset.pause);
-    update();
-  });
 
   if (!touch) {
     const hero = root.closest('.hero-wrap');
@@ -431,7 +423,7 @@
   else window.addEventListener('resize', resize);
 
   if ('IntersectionObserver' in window) {
-    // On phones the scene sits below the buttons: the story starts once it's seen.
+    // The story starts once the scene is actually visible.
     new IntersectionObserver((entries) => {
       inView = entries[entries.length - 1].isIntersecting;
       update();

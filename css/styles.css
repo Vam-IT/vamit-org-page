@@ -306,63 +306,13 @@ h1 strong { font-weight: 700; }
 .foreign-lang .lang-hint { display: inline-flex; }
 
 /* ── HERO SCENE (js/hero-scene.js) ─────────── */
-.hero-scene {
-  position: absolute;
-  top: calc(var(--nav-h) + 1rem);
-  bottom: 1.5rem;
-  right: -2rem;
-  width: 52%;
-  background: radial-gradient(closest-side, rgba(0,245,255,0.09), rgba(0,245,255,0));
-}
-
 .hero-scene canvas {
+  background: radial-gradient(closest-side, rgba(0,245,255,0.09), rgba(0,245,255,0));
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-}
-
-.hero--scene > :not(.hero-scene) { max-width: 51%; }
-.hero--scene h1 { font-size: clamp(2.8rem, 5.1vw, 4.2rem); }
-
-.scene-toggle {
-  position: absolute;
-  right: 1rem;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border: 1px solid var(--border-dark);
-  border-radius: 50%;
-  background: rgba(13,20,33,0.75);
-  color: var(--muted-dark);
-  cursor: pointer;
-}
-.scene-toggle[hidden] { display: none; }
-.scene-toggle:hover { color: var(--on-dark); }
-.scene-toggle path { fill: currentColor; }
-.scene-toggle .icon-play,
-.is-paused .scene-toggle .icon-pause { display: none; }
-.is-paused .scene-toggle .icon-play { display: inline; }
-
-/* Below 1001px the scene follows the buttons instead of competing with the text */
-@media (max-width: 1000px) {
-  .hero--scene { min-height: 0; padding-top: calc(var(--nav-h) + 2rem); padding-bottom: 1.5rem; }
-  .hero--scene > :not(.hero-scene) { max-width: 100%; }
-  .hero-scene {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    right: auto;
-    flex-shrink: 0;
-    width: 100%;
-    height: 380px;
-    margin-top: 1.25rem;
-  }
-  .scene-toggle { right: 0; }
 }
 
 /* ── COMMITMENTS STRIP ───────────────────── */
@@ -1125,9 +1075,7 @@ footer {
   .hero { padding: calc(var(--nav-h) + 2rem) 0 3rem; min-height: 0; }
   .hero--page { padding: calc(var(--nav-h) + 1.75rem) 0 2rem; }
   .hero-eyebrow { margin-bottom: 1rem; }
-  h1,
-  .hero--scene h1 { font-size: clamp(2rem, 9.5vw, 2.8rem); margin-bottom: 1.1rem; }
-  .hero--scene { padding-bottom: 1rem; }
+  h1 { font-size: clamp(2rem, 9.5vw, 2.8rem); margin-bottom: 1.1rem; }
   /* "Datenschutzerklärung" is one 20-character word and has to fit at 320px */
   .hero--page h1 { font-size: clamp(1.5rem, 8.3vw, 2.6rem); }
   h2 { font-size: clamp(1.65rem, 7vw, 2.1rem); }
@@ -1154,7 +1102,6 @@ footer {
 
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; align-items: stretch; gap: 0.75rem; }
-  .hero-scene { height: 290px; }
   .commit-strip { grid-template-columns: 1fr; gap: 1.5rem; }
   .service-card { padding: 1.5rem; }
   .founder-card { padding: 1.5rem 1.5rem 0.75rem; }
@@ -1173,24 +1120,18 @@ footer {
   .hero { padding-top: calc(var(--nav-h) + 1rem); padding-bottom: 2rem; }
   .hero-eyebrow { margin-bottom: 0.6rem; }
   .foreign-lang .lang-hint + .hero-eyebrow { display: none; }
-  h1,
-  .hero--scene h1 { font-size: clamp(1.8rem, 8.8vw, 2.1rem); margin-bottom: 0.75rem; }
-  .hero--scene { padding-top: calc(var(--nav-h) + 1rem); }
-  .hero-scene { height: 250px; }
+  h1 { font-size: clamp(1.8rem, 8.8vw, 2.1rem); margin-bottom: 0.75rem; }
   .hero-sub { margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.5; }
 }
 
 /* Phones held sideways: very little height */
 @media (max-height: 500px) and (orientation: landscape) {
   :root { --nav-h: 52px; }
-  .hero,
-  .hero--scene { min-height: 0; padding: calc(var(--nav-h) + 0.75rem) 0 2rem; }
-  .hero--scene > :not(.hero-scene) { max-width: 100%; }
-  .hero-scene { position: relative; top: auto; bottom: auto; right: auto; flex-shrink: 0; width: 100%; height: 260px; }
+  .hero { min-height: 0; padding: calc(var(--nav-h) + 0.75rem) 0 2rem; }
   .hero-eyebrow { margin-bottom: 0.4rem; }
   .lang-hint { margin: -0.5rem 0 0.2rem; font-size: 0.75rem; }
   .foreign-lang .lang-hint + .hero-eyebrow { display: none; }
-  .hero:not(.hero--page) h1 { font-size: 1.55rem; max-width: none; margin-bottom: 0.4rem; }
+  .hero--error h1 { font-size: 1.55rem; max-width: none; margin-bottom: 0.4rem; }
   .hero-sub { max-width: 80ch; margin-bottom: 0.75rem; font-size: 0.875rem; line-height: 1.45; }
   .hero-actions { flex-direction: row; }
   .nav-links li a { min-height: 44px; }
@@ -1207,4 +1148,214 @@ footer {
   .nav-links { display: flex; position: static; flex-direction: row; padding: 0; border: 0; box-shadow: none; }
   .nav-links li:not(:last-child) { display: none; }
   .nav-links a.nav-cta { margin: 0; min-height: 44px; padding: 0 1rem; }
+}
+
+/* ── FULL-SCREEN HOME HERO ───────────────────
+   The first screen never shows the next section:
+   - the background is at least 100lvh, so it still fills the screen once the
+     browser bar has collapsed. iOS Safari needs more, see below
+   - the content fits into 100svh, the part that is visible on load
+   - one unit, --u, scales type, buttons and spacing with the screen
+   Three layouts: side by side (default), stacked (narrow or portrait) and
+   compact side by side (phones held sideways).
+   Keep this block at the end of the file, it overrides the generic hero rules. */
+
+.hero-wrap--full {
+  --hero-w: min(100vw - 2 * var(--gutter), max(1100px, min(72vw, 140svh)));
+  --u: max(1rem, var(--hero-w) * 0.01455);
+  --hero-foot: 56px; /* row with the scroll arrow */
+
+  flex-shrink: 0;
+  min-height: 100vh;
+  min-height: 100lvh;
+}
+
+/* iOS 26+ Safari draws the page behind its floating bar, beyond 100lvh
+   (measured on iPhone 17e: lvh 739px, painted down to 797px). No CSS unit
+   describes that strip, so the background gets a safety margin. Only WebKit on
+   iOS/iPadOS supports -webkit-touch-callout. */
+@supports (-webkit-touch-callout: none) {
+  .hero-wrap--full { min-height: calc(100lvh + 100px); }
+}
+
+.hero-wrap--full .hero--scene {
+  width: 100%;
+  max-width: var(--hero-w);
+  min-height: 100vh;
+  min-height: 100svh;
+  justify-content: center;
+  padding: calc(var(--nav-h) + 1rem) 0 var(--hero-foot);
+}
+
+.hero--scene > :not(.hero-scene):not(.hero-next) { max-width: 51%; flex-shrink: 0; }
+
+.hero--scene .hero-eyebrow {
+  font-size: calc(var(--u) * 0.75);
+  margin-bottom: min(var(--u) * 2, 3svh);
+}
+
+.hero--scene h1 {
+  font-size: max(2.1rem, min(var(--hero-w) * 0.0607, 9.8svh));
+  margin-bottom: min(var(--u) * 1.75, 2.8svh);
+}
+
+.hero--scene .hero-sub {
+  font-size: calc(var(--u) * 1.15);
+  line-height: 1.6;
+  margin-bottom: min(var(--u) * 3, 4svh);
+}
+
+.hero--scene .hero-actions { gap: calc(var(--u) * 0.85); }
+
+.hero--scene .btn {
+  font-size: calc(var(--u) * 0.95);
+  min-height: max(48px, var(--u) * 3);
+  padding: 0.5rem calc(var(--u) * 1.6);
+  white-space: nowrap;
+}
+
+.hero-scene {
+  position: absolute;
+  top: calc(var(--nav-h) + 1rem);
+  bottom: calc(var(--hero-foot) + var(--consent-h, 0px));
+  right: -1.5rem;
+  width: 51%;
+  container-type: size;
+}
+
+/* Too little room to recognize anything, e.g. tiny phone with consent banner */
+@container (max-height: 70px) {
+  .hero-scene > * { display: none; }
+}
+
+.hero-next {
+  position: absolute;
+  left: 50%;
+  bottom: calc(6px + var(--consent-h, 0px));
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 44px;
+  color: var(--muted-dark);
+}
+.hero-next:hover { color: var(--cyan); }
+
+/* Stacked: text on top, the scene takes whatever height is left */
+@media (max-width: 1000px), (orientation: portrait) {
+  .hero-wrap--full {
+    --hero-w: 100%;
+    --u: max(1rem, min(2.3vw, 1.75svh));
+  }
+
+  .hero-wrap--full .hero--scene {
+    justify-content: flex-start;
+    padding-top: calc(var(--nav-h) + min(3rem, 3.5svh));
+    padding-bottom: calc(var(--hero-foot) + var(--consent-h, 0px));
+  }
+
+  .hero--scene > :not(.hero-scene):not(.hero-next) { max-width: 100%; }
+  .hero--scene h1 { font-size: max(2rem, min(8.2vw, 6.4svh)); }
+  .hero--scene .hero-sub { max-width: 44ch; margin-bottom: min(var(--u) * 2, 3svh); }
+
+  .hero-scene {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+    margin-top: min(1.25rem, 1.5svh);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-wrap--full { --hero-foot: 52px; }
+  .hero--scene h1 { font-size: min(9.5vw, 2.8rem); }
+  .hero--scene .hero-eyebrow { font-size: 0.75rem; }
+  .hero--scene .hero-sub { font-size: 1rem; line-height: 1.55; }
+}
+
+/* narrower than 340px: keep the eyebrow on one line */
+@media (max-width: 339px) {
+  .hero--scene .hero-eyebrow { gap: 0.5rem; letter-spacing: 0.06em; }
+  .hero--scene .hero-eyebrow::before { width: 1rem; }
+}
+
+/* Short phones upright: buttons share a row, so the scene keeps some height */
+@media (max-width: 480px) and (max-height: 830px) {
+  .hero-wrap--full .hero--scene { padding-top: calc(var(--nav-h) + 0.9rem); }
+  .hero--scene .hero-eyebrow { margin-bottom: 0.6rem; }
+  .hero--scene h1 { font-size: min(8.8vw, 2.2rem); margin-bottom: 0.65rem; }
+  .hero--scene .hero-sub { font-size: 0.95rem; line-height: 1.45; margin-bottom: 0.9rem; }
+  .hero--scene .hero-actions { flex-direction: row; flex-wrap: nowrap; gap: 0.5rem; }
+  .hero--scene .btn { flex: 1 1 auto; padding-left: 0.4rem; padding-right: 0.4rem; font-size: 0.85rem; }
+}
+
+/* No room for two buttons. The arrow below leads to the same section. */
+@media (max-width: 359px) and (max-height: 830px) {
+  .hero--scene .btn-ghost { display: none; }
+}
+
+/* Phones sideways: text left, scene right */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-wrap--full {
+    --hero-w: 100%;
+    --u: 1rem;
+    --hero-foot: 8px;
+  }
+
+  .hero-wrap--full .hero--scene {
+    justify-content: flex-start;
+    padding: calc(var(--nav-h) + min(4rem, (100svh - 310px) * 0.4 + 0.5rem)) 0 var(--hero-foot);
+  }
+
+  .hero--scene > :not(.hero-scene):not(.hero-next) { max-width: 59%; }
+  .hero--scene .hero-eyebrow { font-size: 0.75rem; margin-bottom: 0.4rem; }
+  .hero--scene h1 { font-size: min(1.9rem, 4.3vw, 8svh); margin-bottom: 0.4rem; }
+  .hero--scene .hero-sub { font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.65rem; }
+  .hero--scene .hero-actions { flex-direction: row; flex-wrap: nowrap; gap: 0.5rem; }
+  .hero--scene .btn { min-height: 44px; padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+
+  .hero-scene {
+    position: absolute;
+    top: calc(var(--nav-h) + 0.25rem);
+    bottom: calc(var(--hero-foot) + var(--consent-h, 0px));
+    right: 0;
+    width: 40%;
+    margin: 0;
+  }
+
+  .hero-next { display: none; }
+}
+
+@media (max-height: 350px) and (orientation: landscape) {
+  .hero--scene .hero-eyebrow { display: none; }
+}
+
+@media (max-width: 639px) and (max-height: 500px) and (orientation: landscape) {
+  .hero--scene .btn-ghost { display: none; }
+}
+
+/* The English hint needs a row of its own: on short screens it replaces the eyebrow */
+@media (max-height: 700px), (max-width: 480px) and (max-height: 830px) {
+  .foreign-lang .hero--scene .lang-hint { margin-bottom: 0.5rem; }
+  .foreign-lang .hero--scene .lang-hint + .hero-eyebrow { display: none; }
+}
+
+@media (max-width: 480px) and (max-height: 600px) {
+  .hero-wrap--full { --hero-foot: 44px; }
+  .foreign-lang .hero-wrap--full .hero--scene { padding-top: calc(var(--nav-h) + 0.25rem); }
+  .foreign-lang .hero--scene .lang-hint { margin-bottom: 0.2rem; }
+  .foreign-lang .hero--scene h1 { font-size: min(8vw, 1.8rem); margin-bottom: 0.4rem; }
+  .foreign-lang .hero--scene .hero-sub { font-size: 0.875rem; line-height: 1.4; margin-bottom: 0.6rem; }
+}
+
+@media (max-height: 350px) and (orientation: landscape) {
+  .foreign-lang .hero-wrap--full .hero--scene { padding-top: var(--nav-h); }
+  .foreign-lang .hero--scene .lang-hint { margin: 0 0 0.3rem; }
+  .foreign-lang .hero--scene h1 { font-size: 1.3rem; margin-bottom: 0.2rem; }
+  .foreign-lang .hero--scene .hero-sub { font-size: 0.75rem; line-height: 1.3; margin-bottom: 0.3rem; }
 }
