@@ -19,6 +19,8 @@ aktiver Zustimmung nachgeladen wird (`js/vendor/`, `js/analytics.js`) — Detail
 
 ## Regeln
 
+- Der Hero der Startseiten füllt immer den ersten Bildschirm (letzter Block in `css/styles.css`).
+  Längere Hero-Texte immer bei 320×568, 568×320 und 1280×559 gegenprüfen, jeweils mit Consent-Banner.
 - Keine automatische Sprachweiterleitung (SEO), nur ein Hinweis-Link (`js/lang.js`).
 - Wer ändert, was PostHog erfasst, passt `datenschutz.html` (Abschnitt V) an. Bei einem neuen
   Zweck zusätzlich den Bannertext und die Version von `CONSENT_KEY` in `js/consent.js`.
