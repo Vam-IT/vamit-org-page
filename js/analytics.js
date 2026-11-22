@@ -21,11 +21,29 @@ window.vamitInitAnalytics = function () {
     disable_session_recording: true,
     disable_surveys: true,
 
+    // Pinned here, because several of these are switched on in the PostHog
+    // project and would otherwise follow the remote config. Changing any of
+    // them means updating datenschutz.html (section V) as well.
+    capture_performance: false,
+    capture_heatmaps: false,
+    capture_dead_clicks: false,
+    capture_exceptions: false,
+    rageclick: false,
+    advanced_disable_flags: true,
+    disable_external_dependency_loading: true,
+    mask_personal_data_properties: true, // ad click IDs such as gclid, fbclid
+
     // Don't create persistent "Person" profiles for anonymous traffic --
     // we never call posthog.identify().
     person_profiles: 'identified_only',
 
     // Respect the browser's Do Not Track signal, if sent.
     respect_dnt: true,
+
+    // Consent can be withdrawn after init. Checked per event, because
+    // PostHog's own opt-out would write to browser storage.
+    before_send: function (event) {
+      return window.vamitConsent && window.vamitConsent.isGranted() ? event : null;
+    },
   });
 };
